@@ -89,19 +89,28 @@ function obfuscateEmail(email: string) {
   return `${firstChar}${asterisksBeforeAt}@${asterisksAfterAt}${lastChar}`;
 }
 
-const shouldShowCancellation = eventDateStart.getTime() > Date.now();
+const isFutureEvent = eventDateStart.getTime() > Date.now();
 ---
 
 <Section style="contrast">
   <Container>
     <div class="container">
       <Heading level={1} title="Your ticket" />
-      <p class="lead">
-        Thanks for registering. We are looking forward to seeing you at the
-        event. Here is your ticket. Add an event to your calendar:{" "}
-        <a href={inviteUrls.iCal}>iCalendar</a> or{" "}
-        <a href={inviteUrls.google}>Google Calendar</a>
-      </p>
+      {
+        isFutureEvent ? (
+          <p class="lead">
+            Thanks for registering. We are looking forward to seeing you at the
+            event. Here is your ticket. Add an event to your calendar:{" "}
+            <a href={inviteUrls.iCal}>iCalendar</a> or{" "}
+            <a href={inviteUrls.google}>Google Calendar</a>
+          </p>
+        ) : (
+          <p class="lead">
+            Thanks for coming. We hope you enjoyed the event! I will see you at
+            the next events, and here is just your ticket for your records.
+          </p>
+        )
+      }
 
       <div class="ticket__container">
         <div class="ticket">
@@ -128,7 +137,7 @@ const shouldShowCancellation = eventDateStart.getTime() > Date.now();
       </div>
 
       {
-        shouldShowCancellation && (
+        isFutureEvent && (
           <p class="ticket__cancel">
             Can't make it anymore? You can{" "}
             <a href={`/events/${eventId}/${ticketId}/cancel`}>
