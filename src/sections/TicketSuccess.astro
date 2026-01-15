@@ -1,5 +1,6 @@
 ---
 import Heading from "../components/Heading.astro";
+import Button from "../components/Button.astro";
 import Section from "../components/Section.astro";
 import Container from "../components/Container.astro";
 import { getInviteUrls } from "../utils";
@@ -136,8 +137,10 @@ const isFutureEvent = eventDateStart.getTime() > Date.now();
         </div>
       </div>
 
+
       {
         isFutureEvent && (
+        <Button id="share-button" text="Share info about this event" />
           <p class="ticket__cancel">
             Can't make it anymore? You can{" "}
             <a href={`/events/${eventId}/${ticketId}/cancel`}>
@@ -301,4 +304,26 @@ const isFutureEvent = eventDateStart.getTime() > Date.now();
       disableForReducedMotion: true,
     });
   }, 250);
+
+  const BUTTON_SHARE = document.getElementById("share-button");
+
+  if (!BUTTON_SHARE) {
+    throw new Error("Share button not found");
+  }
+
+  if (!("share" in navigator)) {
+    BUTTON_SHARE.remove();
+  }
+
+  const url = new URL(location.href);
+  url.pathname = url.pathname.split("/").slice(0, -1).join("/");
+
+  BUTTON_SHARE.addEventListener("click", () => {
+    navigator
+      .share({ title: document.title, url: url.href })
+      .then(() => {
+        BUTTON_SHARE.innerText = "Shared";
+      })
+      .catch((error) => console.log(error.message));
+  });
 </script>
