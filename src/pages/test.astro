@@ -14,17 +14,16 @@ import Container from "../components/Container.astro";
   <Hero title="Test" description="Test" />
   <Section>
     <Container narrow>
-      <button type="button" onclick="throwTestError()">
-        Throw a frontend error
-      </button>
-      <button type="button" onclick="throwApiError()">Throw an API error</button
-      >
+      <button type="button" onclick="throwTestError()"> Frontend error </button>
+      <button type="button" onclick="throwApiError()">API error</button>
+      <button type="button" onclick="throwApiTraceError()">API error</button>
+
       Throw an API error with a trace
     </Container>
     >
     <script is:inline>
       import * as Sentry from "@sentry/astro";
-      async function throwApiError() {
+      async function throwApiTraceError() {
         await Sentry.startSpan(
           {
             name: "Example Frontend Span",
