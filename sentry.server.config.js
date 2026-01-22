@@ -7,4 +7,7 @@ Sentry.init({
   tracesSampleRate: 1.0,
   profileSessionSampleRate: 1.0,
   enableLogs: true,
+  org: "nn1-dev",
+  project: "website",
+  authToken: process.env.SENTRY_AUTH_TOKEN,
 });
