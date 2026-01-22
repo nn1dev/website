@@ -7,7 +7,7 @@ export default defineAction({
   accept: "form",
   input: z
     .object({
-      name: z.string().trim(),
+      name: z.string().trim().max(255),
       email: z.string().email().trim(),
       newsletter: z.optional(z.string().transform((value) => value === "on")),
       eventId: z.string().transform((value) => parseInt(value)),
@@ -87,7 +87,7 @@ export default defineAction({
       Sentry.captureException(responseJson.data);
       throw new ActionError({
         code: "BAD_REQUEST",
-        message: responseJson.data,
+        message: "Failed to create a new ticket.",
       });
     }
 
