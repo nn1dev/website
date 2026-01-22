@@ -143,9 +143,9 @@ const isFutureEvent = eventDateStart.getTime() > Date.now();
         <Button id="share-button" text="Share info about this event" />
           <p class="ticket__cancel">
             Can't make it anymore? You can{" "}
-            <a href={`/events/${eventId}/${ticketId}/cancel`}>
+            <button id="cancel-button" >
               cancel your ticket here
-            </a>
+            </button>
             .
           </p>
         )
@@ -266,8 +266,20 @@ const isFutureEvent = eventDateStart.getTime() > Date.now();
     font-size: 14px;
     color: var(--color-fg-dim);
 
-    & a {
+    & button {
+      appearance: none;
+      font: inherit;
+      background: none;
+      border: none;
       color: inherit;
+      text-decoration: underline;
+      cursor: pointer;
+
+      &:focus-visible {
+        outline: 2px dotted var(--color-accent);
+        outline-offset: 2px;
+        color: var(--color-accent-light);
+      }
     }
   }
 </style>
@@ -306,9 +318,14 @@ const isFutureEvent = eventDateStart.getTime() > Date.now();
   }, 250);
 
   const BUTTON_SHARE = document.getElementById("share-button");
+  const BUTTON_CANCEL = document.getElementById("cancel-button");
 
   if (!BUTTON_SHARE) {
     throw new Error("Share button not found");
+  }
+
+  if (!BUTTON_CANCEL) {
+    throw new Error("Cancel button not found");
   }
 
   if (!("share" in navigator)) {
@@ -325,5 +342,15 @@ const isFutureEvent = eventDateStart.getTime() > Date.now();
         BUTTON_SHARE.innerText = "Shared";
       })
       .catch((error) => console.log(error.message));
+  });
+
+  BUTTON_CANCEL.addEventListener("click", () => {
+    if (
+      confirm(
+        "Are you sure you want to cancel your ticket? This action cannot be undone.",
+      )
+    ) {
+      window.location.href = `${window.location.href}/cancel`;
+    }
   });
 </script>
