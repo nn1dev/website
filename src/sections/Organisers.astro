@@ -30,7 +30,6 @@ const fetchContributors = async () => {
 
     return responseJson;
   } catch (e) {
-    console.error("Error fetching contributors", e);
     return [] as Array<Contributor>;
   }
 };

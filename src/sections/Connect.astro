@@ -176,8 +176,6 @@ import Input from "../components/Input.astro";
       throw new Error(error.message);
     }
 
-    console.log({ data });
-
     window.location.href = `/newsletter/${data}`;
 
     return undefined;
