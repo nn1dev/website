@@ -1,0 +1,106 @@
+---
+import { getCollection } from "astro:content";
+import Container from "../components/Container.astro";
+import Heading from "../components/Heading.astro";
+import Section from "../components/Section.astro";
+
+const allFeedback = await getCollection("feedback");
+const allEvents = await getCollection("events");
+---
+
+<Section style="contrast">
+  <Container>
+    <div class="feedback">
+      <Heading level={2} title="What attendees say" anchor />
+      <div class="feedback__grid">
+        {
+          allFeedback
+            .filter((item) => item.data.featured)
+            .map(({ id, data: { name, role, quote } }) => {
+              const eventId = id.split("/")[0];
+              const event = allEvents.find((e) => e.id === eventId);
+
+              return (
+                <a href={`/events/${eventId}`} class="feedback__item">
+                  <div class="feedback__item-content">
+                    <h3 class="feedback__item-name">{event?.data.name}</h3>
+                    <blockquote class="feedback__item-quote">{quote}</blockquote>
+                    <div class="feedback__item-author">
+                      <p class="feedback__item-author-name">{name}</p>
+                      {role ? (
+                        <p class="feedback__item-author-role">{role}</p>
+                      ) : null}
+                    </div>
+                  </div>
+                </a>
+              );
+            })
+        }
+      </div>
+    </div>
+  </Container>
+</Section>
+
+<style>
+  .feedback {
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--lh) * 1.5);
+  }
+
+  .feedback__grid {
+    display: grid;
+    gap: calc(var(--lh) / 2);
+
+    @media (800px <= width) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .feedback__item {
+    box-shadow: 0 0 0 1px var(--color-border);
+    background-color: var(--color-bg);
+    padding: var(--lh);
+    color: inherit;
+    border-radius: var(--br);
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+
+    &:hover {
+      box-shadow: 0 0 0 1px var(--color-accent);
+      color: var(--color-accent);
+    }
+  }
+
+  .feedback__item-content {
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--lh) * 0.75);
+    flex-grow: 1;
+  }
+
+  .feedback__item-name {
+    max-width: 60ch;
+    font-size: 1rem;
+  }
+
+  .feedback__item-quote {
+    font-style: italic;
+    flex-grow: 1;
+  }
+
+  .feedback__item-author {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .feedback__item-author-name {
+    font-weight: 600;
+  }
+
+  .feedback__item-author-role {
+    font-size: 14px;
+    opacity: 0.5;
+  }
+</style>
