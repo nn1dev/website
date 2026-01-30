@@ -1,9 +1,8 @@
 {
   "id": 11,
   "ogImage": "./og.jpg",
-  "draft": true,
-  "name": "#11: \"TBC\" by Oliver Medhurst and \"TBC\" by Rob Hough",
-  "description": "TBC",
+  "name": "#11: \"Compiling JavaScript ahead-of-time\" by Oliver Medhurst and \"Future of Work is Async\" by Rob Hough",
+  "description": "Another combination of extremely technical deep dives with soft skills efficiency boosters. Join us if you want to learn how to match the performance of JavaScript code with compiled Rust and to find out why async work is the future of our fast-paced industry.",
   "dateStart": "2026-03-26T18:00Z",
   "dateEnd": "2026-03-26T20:00Z",
   "location": "Vulcan Works, 34-38 Guildhall Rd, Northampton, NN1 1EW",
@@ -21,8 +20,8 @@
     {
       "dateStart": "2026-03-26T18:30Z",
       "dateEnd": "2026-03-26T19:00Z",
-      "title": "\"TBC\" by Oliver Medhurst",
-      "description": ""
+      "title": "\"Compiling JavaScript ahead-of-time\" by Oliver Medhurst",
+      "description": "Existing JavaScript (and TypeScript) is compiled just-in-time, compiled from source on user's machines, but what about ahead-of-time, compiled in advance like C++ or Rust? This talk will explore the pros and cons of this upcoming paradigm with real-world examples and working demos!"
     },
     {
       "dateStart": "2026-03-26T19:00Z",
@@ -32,7 +31,8 @@
     {
       "dateStart": "2026-03-26T19:15Z",
       "dateEnd": "2026-03-26T19:45Z",
-      "title": "\"TBC\" by Rob Hough"
+      "title": "\"Future of Work is Async\" by Rob Hough",
+      "description": " The way developers work is changing. Remote work, AI, and automation mean we have more leverage than ever — yet many teams are still trapped in endless meetings, interruptions, and slow-moving projects. This talk explores why smaller, async teams are becoming a competitive advantage, and what it takes to work this way effectively."
     }
   ],
   "speakers": ["oliver-medhurst", "rob-hough"]
