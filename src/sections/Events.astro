@@ -8,6 +8,15 @@ const allEvents = await getCollection("events");
 
 const isUpcoming = (date: Date) => new Date().getTime() < date.getTime();
 
+const upcomingEvent = allEvents
+  .filter(
+    (event) =>
+      (import.meta.env.MODE === "development" || !event.data.draft) &&
+      isUpcoming(event.data.dateStart),
+  )
+  .sort((a, b) => parseInt(a.id) - parseInt(b.id))
+  .at(0);
+
 const formatTime = (date: Date) =>
   new Intl.DateTimeFormat("en-GB", {
     timeZone: "Europe/London",
@@ -126,6 +135,22 @@ const formatTime = (date: Date) =>
     </div>
   </Container>
 </Section>
+
+{
+  upcomingEvent && (
+    <script
+      type="speculationrules"
+      set:html={JSON.stringify({
+        prerender: [
+          {
+            where: { href_matches: `/events/${upcomingEvent.id}` },
+            eagerness: "moderate",
+          },
+        ],
+      })}
+    />
+  )
+}
 
 <style>
   .events {
