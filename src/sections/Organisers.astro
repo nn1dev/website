@@ -3,7 +3,8 @@ import Container from "../components/Container.astro";
 import Profile from "../components/Profile.astro";
 import Heading from "../components/Heading.astro";
 import Section from "../components/Section.astro";
-import { getEntry } from "astro:content";
+import { Image } from "astro:assets";
+import { getEntry, getCollection } from "astro:content";
 
 const organisers = await Promise.all([
   getEntry("member", "pawel-grzybek"),
@@ -47,11 +48,43 @@ interface Props {
 }
 
 const { founders = true, partners = true, supporters = true } = Astro.props;
+
+const allFeedback = await getCollection("feedback");
 ---
 
 <Section>
   <Container>
     <div class="organisers">
+      <div class="feedback">
+        <Heading level={2} title="What attendees say" anchor />
+        <div class="feedback__grid">
+          {
+            allFeedback.map(({ data: { image, name, role, quote } }) => (
+              <div class="feedback__item">
+                <div class="feedback__item-content">
+                  <blockquote class="feedback__item-quote">{quote}</blockquote>
+                  <div class="feedback__item-author">
+                    <Image
+                      src={image}
+                      alt={name}
+                      width="48"
+                      height="48"
+                      loading="lazy"
+                      class="feedback__item-author-image"
+                    />
+                    <div class="feedback__item-author-info">
+                      <p class="feedback__item-author-name">{name}</p>
+                      {role ? (
+                        <p class="feedback__item-author-role">{role}</p>
+                      ) : null}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))
+          }
+        </div>
+      </div>
       {
         founders ? (
           <div class="organisers__section">
@@ -206,6 +239,65 @@ const { founders = true, partners = true, supporters = true } = Astro.props;
     display: flex;
     flex-direction: column;
     gap: calc(var(--lh) * 3);
+  }
+
+  .feedback {
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--lh) * 1.5);
+  }
+
+  .feedback__grid {
+    display: grid;
+    gap: calc(var(--lh) * 2);
+
+    @media (800px <= width) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .feedback__item {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .feedback__item-content {
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--lh) * 0.75);
+    flex-grow: 1;
+  }
+
+  .feedback__item-quote {
+    font-style: italic;
+    flex-grow: 1;
+  }
+
+  .feedback__item-author {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5lh;
+  }
+
+  .feedback__item-author-image {
+    width: 2lh;
+    height: 2lh;
+    object-fit: cover;
+    border-radius: var(--br);
+  }
+
+  .feedback__item-author-info {
+    min-width: 0;
+    flex-grow: 1;
+  }
+
+  .feedback__item-author-name {
+    font-weight: 600;
+  }
+
+  .feedback__item-author-role {
+    font-size: 14px;
+    opacity: 0.5;
   }
 
   .organisers__section {

@@ -5,7 +5,6 @@ import Hero from "../sections/Hero.astro";
 import Organisers from "../sections/Organisers.astro";
 import Connect from "../sections/Connect.astro";
 import Events from "../sections/Events.astro";
-import Feedback from "../sections/Feedback.astro";
 import ButtonLink from "../components/ButtonLink.astro";
 
 const allEvents = await getCollection("events");
@@ -32,7 +31,6 @@ const eventRecentIsUpcoming =
     }
   </Hero>
   <Events />
-  <!-- <Feedback /> -->
   <Organisers />
   <Connect />
 </Layout>
