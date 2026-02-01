@@ -101,4 +101,17 @@ const spotlight = defineCollection({
     }),
 });
 
-export const collections = { events, member, spotlight };
+const feedback = defineCollection({
+  loader: glob({ pattern: "**/*.json", base: "./src/data/feedback" }),
+  schema: ({ image }) =>
+    z
+      .object({
+        image: image(),
+        name: z.string(),
+        role: z.string().optional(),
+        quote: z.string(),
+      })
+      .strict(),
+});
+
+export const collections = { events, member, spotlight, feedback };
