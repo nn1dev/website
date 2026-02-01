@@ -320,22 +320,15 @@ const isFutureEvent = eventDateStart.getTime() > Date.now();
   const BUTTON_SHARE = document.getElementById("share-button");
   const BUTTON_CANCEL = document.getElementById("cancel-button");
 
-  if (!BUTTON_SHARE) {
-    throw new Error("Share button not found");
-  }
 
-  if (!BUTTON_CANCEL) {
-    throw new Error("Cancel button not found");
-  }
-
-  if (!("share" in navigator)) {
+  if (BUTTON_SHARE && !("share" in navigator)) {
     BUTTON_SHARE.remove();
   }
 
   const url = new URL(location.href);
   url.pathname = url.pathname.split("/").slice(0, -1).join("/");
 
-  BUTTON_SHARE.addEventListener("click", () => {
+  BUTTON_SHARE?.addEventListener("click", () => {
     navigator
       .share({ title: document.title, url: url.href })
       .then(() => {
@@ -344,7 +337,7 @@ const isFutureEvent = eventDateStart.getTime() > Date.now();
       .catch((error) => console.log(error.message));
   });
 
-  BUTTON_CANCEL.addEventListener("click", () => {
+  BUTTON_CANCEL?.addEventListener("click", () => {
     if (
       confirm(
         "Are you sure you want to cancel your ticket? This action cannot be undone.",
