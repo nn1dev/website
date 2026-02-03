@@ -18,7 +18,7 @@ let subscriptionTimestamp = "";
 
 try {
   const response = await fetch(`${API_URL}/subscribers/${subscriberId}`, {
-    headers: { Authorization: `Bearer ${API_AUTH}`, ...Sentry.getTraceData() },
+    headers: { Authorization: `Bearer ${API_AUTH}` },
   });
 
 

@@ -33,7 +33,7 @@ try {
   });
 
   const response = await fetch(`${API_URL}/tickets/${eventId}/${ticketId}`, {
-    headers: { Authorization: `Bearer ${API_AUTH}`, ...Sentry.getTraceData() },
+    headers: { Authorization: `Bearer ${API_AUTH}` },
   });
 
   if (!response.ok) {

@@ -41,7 +41,6 @@ export default defineAction({
       method: "POST",
       headers: {
         Authorization: `Bearer ${API_AUTH}`,
-        ...Sentry.getTraceData(),
       },
       body: JSON.stringify({
         name,

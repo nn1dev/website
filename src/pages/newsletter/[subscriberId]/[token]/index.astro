@@ -17,7 +17,7 @@ if (!API_URL || !API_AUTH) {
 
 try {
   const response = await fetch(`${API_URL}/subscribers/${subscriberId}`, {
-    headers: { Authorization: `Bearer ${API_AUTH}`, ...Sentry.getTraceData() },
+    headers: { Authorization: `Bearer ${API_AUTH}` },
   });
 
   if (!response.ok) {
@@ -48,7 +48,7 @@ try {
 try {
   const response = await fetch(`${API_URL}/subscribers/${subscriberId}`, {
     method: "PUT",
-    headers: { Authorization: `Bearer ${API_AUTH}`, ...Sentry.getTraceData() },
+    headers: { Authorization: `Bearer ${API_AUTH}` },
     body: JSON.stringify({
       confirmationToken: token,
     }),
