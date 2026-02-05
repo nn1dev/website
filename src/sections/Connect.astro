@@ -164,6 +164,9 @@ import Input from "../components/Input.astro";
   const form = document.querySelector("form");
   const FORM_LOADING_CLASS = "connect__form--loading";
 
+  const traceData = Sentry.getTraceData();
+  console.log({ traceDataClient: traceData });
+
   form?.addEventListener("submit", async (e) => {
     e.preventDefault();
     form.classList.add(FORM_LOADING_CLASS);

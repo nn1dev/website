@@ -20,6 +20,9 @@ export default defineAction({
       });
     }
 
+    const traceData = Sentry.getTraceData();
+    console.log({ traceDataAction: traceData });
+
     const response = await fetch(`${API_URL}/subscribers`, {
       method: "POST",
       headers: {
