@@ -13,7 +13,7 @@ Sentry.init({
   replaysSessionSampleRate: 0.1,
   replaysOnErrorSampleRate: 1.0,
   enableLogs: true,
-  org: "nn1-dev",
+  org: "nn1dev",
   project: "website",
-  authToken: process.env.SENTRY_AUTH_TOKEN,
+  authToken: import.meta.env.SENTRY_AUTH_TOKEN,
 });

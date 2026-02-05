@@ -8,7 +8,7 @@ Sentry.init({
   tracePropagationTargets: ["localhost", "https://api.nn1.dev"],
   profileSessionSampleRate: 1.0,
   enableLogs: true,
-  org: "nn1-dev",
+  org: "nn1dev",
   project: "website",
-  authToken: process.env.SENTRY_AUTH_TOKEN,
+  authToken: import.meta.env.SENTRY_AUTH_TOKEN,
 });
