@@ -5,7 +5,7 @@ Sentry.init({
   sendDefaultPii: true,
   environment: import.meta.env.MODE,
   tracesSampleRate: 1.0,
-  tracePropagationTargets: ["localhost", "https://api.nn1.dev"],
+  tracePropagationTargets: ["localhost", "nn1.dev", "api.nn1.dev"],
   profileSessionSampleRate: 1.0,
   enableLogs: true,
   org: "nn1dev",
