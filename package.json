@@ -14,7 +14,7 @@
     "@astrojs/cloudflare": "^12.6.12",
     "@astrojs/rss": "^4.0.15",
     "@astrojs/sitemap": "^3.7.0",
-    "@sentry/astro": "^10.38.0",
+    "@sentry/astro": "^10.39.0",
     "astro": "^5.17.2",
     "canvas-confetti": "^1.9.4",
     "sanitize-html": "^2.17.0",
@@ -27,6 +27,6 @@
     "@types/sanitize-html": "^2.16.0",
     "prettier": "^3.8.1",
     "prettier-plugin-astro": "^0.14.1",
-    "wrangler": "^4.65.0"
+    "wrangler": "^4.66.0"
   }
 }
