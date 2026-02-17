@@ -1,6 +1,5 @@
 ---
 name: "Louie Opina"
-draft: true
 role: "Postgraduate student at the UON"
 date: "2026-02-20"
 image: "portrait.jpg"
