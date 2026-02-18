@@ -23,6 +23,7 @@ const { label, name, checked } = Astro.props;
     type="button"
     role="checkbox"
     aria-checked="false"
+    aria-label={label}
   >
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -32,7 +33,8 @@ const { label, name, checked } = Astro.props;
       stroke-width="3"
       stroke-linecap="round"
       stroke-linejoin="round"
-      class="icon"><path d="M20 6 9 17l-5-5"></path></svg
+      class="icon"
+      aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg
     >
   </button>
   {label}
