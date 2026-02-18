@@ -1,0 +1,57 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Hero from "../sections/Hero.astro";
+import Connect from "../sections/Connect.astro";
+import Section from "../components/Section.astro";
+import Container from "../components/Container.astro";
+---
+
+<Layout
+  title="Coworking days | NN1 Dev Club"
+  description="Join us on the last Friday of every month as we swap our home offices and usual work desks for a beautiful coworking space in the heart of Northampton."
+>
+  <Hero
+    title="Coworking days"
+    description="Join us on the last Friday of every month as we swap our home offices and usual work desks for a beautiful coworking space in the heart of Northampton."
+  />
+  <Section>
+    <Container narrow>
+      <div class="container">
+        <p>
+          It's the perfect opportunity to connect with fellow developers, tackle
+          those mind-boggling software engineering challenges together, and nip
+          out for lunch with the NN1 Dev Club community. Like everything we do,
+          this is free of charge and thanks to the courtesy of Vulcal Works, our
+          members have a dedicated space in the big coworking room at the back.
+        </p>
+
+        <ul class="list">
+          <li>When: Every last Friday of a month</li>
+          <li>
+            Where: <a href="https://maps.app.goo.gl/q7RFeDME5cLZWPFA7"
+              >Vulcan Works, Northampton, NN1 1EW</a
+            >
+          </li>
+          <li>
+            Parking: <a href="https://maps.app.goo.gl/fk3jpaPLSLGrHNmH6"
+              >St. John's Multi Storey Car Park</a
+            >
+          </li>
+          <li>Price: <strong>FREE</strong></li>
+        </ul>
+      </div>
+    </Container>
+  </Section>
+  <Connect />
+</Layout>
+
+<style>
+  .container {
+    display: grid;
+    gap: 1lh;
+  }
+
+  .list {
+    margin-inline-start: 1lh;
+  }
+</style>
