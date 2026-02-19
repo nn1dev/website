@@ -24,7 +24,7 @@ import Input from "../components/Input.astro";
         />
         <button class="connect__submit">Subscribe</button>
       </form>
-      <div class="sr-only" aria-live="polite" id="form-status"></div>
+      <div class="sr-only js-form-status" aria-live="polite"></div>
       <div class="connect__buttons">
         <a
           href="https://github.com/nn1dev"
@@ -171,7 +171,7 @@ import Input from "../components/Input.astro";
   import * as Sentry from "@sentry/astro";
 
   const form = document.querySelector("form");
-  const formStatus = document.getElementById("form-status");
+  const formStatus = document.querySelector(".js-form-status");
   const FORM_LOADING_CLASS = "connect__form--loading";
 
   const traceData = Sentry.getTraceData();
@@ -179,6 +179,7 @@ import Input from "../components/Input.astro";
 
   form?.addEventListener("submit", async (e) => {
     e.preventDefault();
+    if (formStatus) formStatus.textContent = "";
     form.classList.add(FORM_LOADING_CLASS);
     form.setAttribute("aria-busy", "true");
     if (formStatus) formStatus.textContent = "Submitting...";
@@ -324,13 +325,7 @@ import Input from "../components/Input.astro";
 
   .sr-only {
     position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border-width: 0;
+    opacity: 0;
+    clip-path: inset(50%);
   }
 </style>
