@@ -1,6 +1,6 @@
 {
   "main": "dist/_worker.js/index.js",
-  "name": "nn1-dev-website",
+  "name": "nn1dev-website",
   // Update to today's date
   "compatibility_date": "2025-11-29",
   "compatibility_flags": [
