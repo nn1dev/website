@@ -11,4 +11,17 @@ Sentry.init({
   org: "nn1dev",
   project: "website",
   authToken: import.meta.env.SENTRY_AUTH_TOKEN,
+  beforeSend(event, hint) {
+    const message = hint.originalException?.message || event.message || "";
+    const shouldDrop =
+      message.includes("elm.events.push") ||
+      message.includes("generalAddEventListenerLogic") ||
+      event.request?.url?.includes("about:blank");
+
+    if (shouldDrop) {
+      return null;
+    }
+
+    return event;
+  },
 });
