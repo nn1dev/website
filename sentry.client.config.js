@@ -9,19 +9,10 @@ Sentry.init({
   ],
   environment: import.meta.env.MODE,
   tracesSampleRate: 1.0,
-  tracePropagationTargets: [
-    "localhost",
-    "nn1.dev",
-    "api.nn1.dev",
-    "https://nn1dev-api.pawelgrzybek.workers.dev",
-    "https://nn1dev-website.pawelgrzybek.workers.dev",
-  ],
+  tracePropagationTargets: ["localhost", "nn1.dev", "api.nn1.dev"],
   replaysSessionSampleRate: 0.1,
   replaysOnErrorSampleRate: 1.0,
   enableLogs: true,
-  // org: "nn1dev",
-  // project: "website",
-  // authToken: import.meta.env.SENTRY_AUTH_TOKEN,
   beforeSend(event, hint) {
     const message = hint.originalException?.message || event.message || "";
     const shouldDrop =

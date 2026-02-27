@@ -14,9 +14,6 @@ if (!eventId || !ticketId) {
   return Astro.redirect("/404");
 }
 
-const traceData = Sentry.getTraceData();
-console.log({ traceDataFromApi: traceData });
-
 const entry = await getEntry("events", eventId);
 if (entry === undefined) {
   Sentry.captureMessage("Access non-existing event.");

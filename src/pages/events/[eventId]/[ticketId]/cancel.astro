@@ -26,8 +26,6 @@ try {
     headers: { Authorization: `Bearer ${API_AUTH}` },
   });
 
-  console.log({ response });
-
   if (!response.ok) {
     throw new Error("Failed to cancel the ticket.");
   }

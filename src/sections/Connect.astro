@@ -174,9 +174,6 @@ import Input from "../components/Input.astro";
   const formStatus = document.querySelector(".js-form-status");
   const FORM_LOADING_CLASS = "connect__form--loading";
 
-  const traceData = Sentry.getTraceData();
-  console.log({ traceDataFromClient: traceData });
-
   form?.addEventListener("submit", async (e) => {
     e.preventDefault();
     if (formStatus) formStatus.textContent = "";
