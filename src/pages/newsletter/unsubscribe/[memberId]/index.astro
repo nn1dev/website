@@ -11,7 +11,7 @@ if (!memberId) {
 }
 
 const traceData = Sentry.getTraceData();
-console.log({ traceDataActionfromApi: traceData });
+console.log({ traceDataFromApi: traceData });
 
 try {
   const response = await fetch(`${API_URL}/subscribers/${memberId}`, {

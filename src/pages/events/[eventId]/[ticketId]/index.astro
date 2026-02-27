@@ -15,7 +15,7 @@ if (!eventId || !ticketId) {
 }
 
 const traceData = Sentry.getTraceData();
-console.log({ traceDataActionFromAction: traceData });
+console.log({ traceDataFromApi: traceData });
 
 const entry = await getEntry("events", eventId);
 if (entry === undefined) {
