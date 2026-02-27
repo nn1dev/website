@@ -9,13 +9,11 @@ Sentry.init({
     "localhost",
     "nn1.dev",
     "api.nn1.dev",
-    "nn1dev-api.pawelgrzybek.workers.dev",
+    "https://nn1dev-api.pawelgrzybek.workers.dev",
+    "https://nn1dev-website.pawelgrzybek.workers.dev",
   ],
   profileSessionSampleRate: 1.0,
   enableLogs: true,
-  // org: "nn1dev",
-  // project: "website",
-  // authToken: import.meta.env.SENTRY_AUTH_TOKEN,
   beforeSend(event, hint) {
     const message = hint.originalException?.message || event.message || "";
     const shouldDrop =
