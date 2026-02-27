@@ -14,6 +14,7 @@ Sentry.init({
     "nn1.dev",
     "api.nn1.dev",
     "nn1dev-api.pawelgrzybek.workers.dev",
+    "nn1dev-website.pawelgrzybek.workers.dev",
   ],
   replaysSessionSampleRate: 0.1,
   replaysOnErrorSampleRate: 1.0,
