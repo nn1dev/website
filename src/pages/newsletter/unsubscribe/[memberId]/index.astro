@@ -10,6 +10,9 @@ if (!memberId) {
   return Astro.redirect("/404");
 }
 
+const traceData = Sentry.getTraceData();
+console.log({ traceDataActionfromApi: traceData });
+
 try {
   const response = await fetch(`${API_URL}/subscribers/${memberId}`, {
     method: "DELETE",

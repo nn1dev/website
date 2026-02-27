@@ -175,7 +175,7 @@ import Input from "../components/Input.astro";
   const FORM_LOADING_CLASS = "connect__form--loading";
 
   const traceData = Sentry.getTraceData();
-  console.log({ traceDataClient: traceData });
+  console.log({ traceDataFromClient: traceData });
 
   form?.addEventListener("submit", async (e) => {
     e.preventDefault();
@@ -190,7 +190,8 @@ import Input from "../components/Input.astro";
       Sentry.captureException(error);
       form.classList.remove(FORM_LOADING_CLASS);
       form.removeAttribute("aria-busy");
-      if (formStatus) formStatus.textContent = "Something went wrong. Please try again.";
+      if (formStatus)
+        formStatus.textContent = "Something went wrong. Please try again.";
       return;
     }
 
