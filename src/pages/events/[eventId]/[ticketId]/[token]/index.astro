@@ -8,13 +8,11 @@ export const prerender = false;
 
 const { eventId, ticketId, token } = Astro.params;
 if (!eventId || !ticketId || !token) {
-  Sentry.captureMessage("Access non-existing event.");
   return Astro.redirect("/404");
 }
 
 const entry = await getEntry("events", eventId);
 if (entry === undefined) {
-  Sentry.captureMessage("Access non-existing event.");
   return Astro.redirect("/404");
 }
 
@@ -29,7 +27,7 @@ try {
   });
 
   if (!response.ok) {
-    throw new Error("Ticket doesn't exist.");
+    return Astro.redirect("/404");
   }
 
   const responseJson:
@@ -93,7 +91,7 @@ try {
   });
 
   if (!response.ok) {
-    throw new Error("Token validation failed.");
+    return Astro.redirect("/404");
   }
 
   return Astro.redirect(`/events/${eventId}/${ticketId}`);

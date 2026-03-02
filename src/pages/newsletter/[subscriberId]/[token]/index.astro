@@ -6,7 +6,6 @@ export const prerender = false;
 
 const { subscriberId, token } = Astro.params;
 if (!subscriberId || !token) {
-  Sentry.captureMessage("Access non-existing event.");
   return Astro.redirect("/404");
 }
 
@@ -21,7 +20,7 @@ try {
   });
 
   if (!response.ok) {
-    throw new Error("Subscriber doesn't exist.");
+    return Astro.redirect("/404");
   }
 
   const responseJson:
@@ -55,7 +54,7 @@ try {
   });
 
   if (!response.ok) {
-    throw new Error("Token validation failed.");
+    return Astro.redirect("/404");
   }
 
   return Astro.redirect(`/newsletter/${subscriberId}`);

@@ -6,7 +6,6 @@ export const prerender = false;
 
 const { memberId } = Astro.params;
 if (!memberId) {
-  Sentry.captureMessage("Access non-existing event.");
   return Astro.redirect("/404");
 }
 
@@ -17,7 +16,7 @@ try {
   });
 
   if (!response.ok) {
-    throw new Error("Failed to unsubscribe member.");
+    return Astro.redirect("/404");
   }
 
   return Astro.redirect("/newsletter/unsubscribe");

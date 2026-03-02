@@ -9,7 +9,6 @@ export const prerender = false;
 
 const {  subscriberId } = Astro.params;
 if (!subscriberId) {
-  Sentry.captureMessage("Access non-existing subscriber.");
   return Astro.redirect("/404");
 }
 
@@ -23,7 +22,7 @@ try {
 
 
   if (!response.ok) {
-    throw new Error("Ticket doesn't exist.");
+    return Astro.redirect("/404");
   }
 
   const responseJson:
@@ -42,7 +41,7 @@ try {
 
 
   if (responseJson.status === "error") {
-    throw new Error("Subscriber doesn't exist.");
+    return Astro.redirect("/404");
   }
 
   subscriptionTimestamp = responseJson.data.created_at;

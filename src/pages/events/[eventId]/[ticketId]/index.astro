@@ -10,13 +10,11 @@ export const prerender = false;
 
 const { eventId, ticketId } = Astro.params;
 if (!eventId || !ticketId) {
-  Sentry.captureMessage("Access non-existing event.");
   return Astro.redirect("/404");
 }
 
 const entry = await getEntry("events", eventId);
 if (entry === undefined) {
-  Sentry.captureMessage("Access non-existing event.");
   return Astro.redirect("/404");
 }
 
@@ -31,7 +29,7 @@ try {
   });
 
   if (!response.ok) {
-    throw new Error("Ticket doesn't exist.");
+    return Astro.redirect("/404");
   }
 
   const responseJson:
@@ -52,7 +50,7 @@ try {
     | { status: "error"; data: string } = await response.json();
 
   if (responseJson.status === "error") {
-    throw new Error("Ticket doesn't exist.");
+    return Astro.redirect("/404");
   }
 
   ticketTimestamp = responseJson.data.created_at;

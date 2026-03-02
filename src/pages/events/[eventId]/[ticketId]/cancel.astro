@@ -10,13 +10,11 @@ export const prerender = false;
 
 const { eventId, ticketId } = Astro.params;
 if (!eventId || !ticketId) {
-  Sentry.captureMessage("Access non-existing event.");
   return Astro.redirect("/404");
 }
 
 const entry = await getEntry("events", eventId);
 if (entry === undefined) {
-  Sentry.captureMessage("Access non-existing event.");
   return Astro.redirect("/404");
 }
 
@@ -27,7 +25,7 @@ try {
   });
 
   if (!response.ok) {
-    throw new Error("Failed to cancel the ticket.");
+    return Astro.redirect("/404");
   }
 } catch (error) {
   Sentry.captureException(error);
