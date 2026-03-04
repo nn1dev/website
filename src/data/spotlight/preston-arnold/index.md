@@ -34,12 +34,12 @@ I'm at Vulcan Works quite often. Being around other builders is such a great mot
 
 ## What’s your setup? Software and hardware. Pictures welcomed!
 
-**Hardware**
+### Hardware
 
 - Dell XPS 13 9310 Laptop (massive thanks to [Eric Bye](https://www.linkedin.com/in/ericqbye) & [Paweł](https://pawelgrzybek.com/) ❤️)
 - Dell Optiplex 3036 server for hosting and experimentation.
 
-**Sofware**
+### Software
 
 - VS Code
 - Obsidian (notes)
@@ -70,4 +70,3 @@ Stop worrying about whether you're ready. Just build.
 Give "Surely You're Joking, Mr. Feynman!" by Richard Feynman a read, one of the best books I've ever read. It's very inspiring and made me realise that curiosity and experimentation are what drive innovation.
 
 If you're building something interesting, come say hi at a nn1.dev event ([or contact me](https://prestonarnold.uk/contact/)). I'm looking to commit to something.
-
