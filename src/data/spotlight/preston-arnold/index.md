@@ -2,7 +2,7 @@
 draft: true
 name: "Preston Arnold"
 role: "Full-Stack Developer & Builder"
-date: "2026-03-05"
+date: "2026-03-06"
 image: "preston.jpg"
 ogImage: "og.jpg"
 urlWebsite: "https://prestonarnold.uk/"
@@ -12,7 +12,7 @@ urlLinkedIn: "https://www.linkedin.com/in/prestonarnold9/"
 
 ## Who are you and what do you do?
 
-I'm Preston Arnold, a 16-year-old developer living in Duston, Northampton. I've been building on the web for six years now. 
+I'm Preston Arnold, a 16-year-old developer living in Duston, Northampton. I've been building on the web for six years now.
 
 Currently, I work as a freelance developer, taking on client projects, also working on my own side projects that solve problems I encounter. I'm structured about how I work (clear communication, reliable delivery), and I'm always open to teaming up with the right people to start something real.
 
@@ -35,10 +35,12 @@ I'm at Vulcan Works quite often. Being around other builders is such a great mot
 ## What’s your setup? Software and hardware. Pictures welcomed!
 
 **Hardware**
+
 - Dell XPS 13 9310 Laptop (massive thanks to [Eric Bye](https://www.linkedin.com/in/ericqbye) & [Paweł](https://pawelgrzybek.com/) ❤️)
 - Dell Optiplex 3036 server for hosting and experimentation.
 
 **Sofware**
+
 - VS Code
 - Obsidian (notes)
 - Insomnia (API)
@@ -68,3 +70,4 @@ Stop worrying about whether you're ready. Just build.
 Give "Surely You're Joking, Mr. Feynman!" by Richard Feynman a read, one of the best books I've ever read. It's very inspiring and made me realise that curiosity and experimentation are what drive innovation.
 
 If you're building something interesting, come say hi at a nn1.dev event ([or contact me](https://prestonarnold.uk/contact/)). I'm looking to commit to something.
+
