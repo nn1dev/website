@@ -2,7 +2,7 @@
   "image": "./avatar.jpg",
   "name": "Jacek Miloszewski",
   "role": "Senior Software Engineer at FORM3",
-  "bio": "tbc",
+  "bio": "Jacek is a software engineer at Form3 who has spent the last five years under the hood of high-stakes financial systems. From architecting TCH-RTP real-time payments to building out multi-cloud platform infrastructure, he specializes in the parts of the stack that simply cannot fail. He's at his happiest when things get weird at the networking layer. Known for a \"detective\" approach to systems engineering, Jacek loves the deep-dive investigations required to untangle connectivity and performance puzzles in complex, mission-critical environments.",
   "urlGitHub": "https://github.com/jmilosze",
   "urlLinkedIn": "https://www.linkedin.com/in/jacek-miloszewski-571b1420"
 }
