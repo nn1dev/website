@@ -1,5 +1,4 @@
 ---
-draft: true
 name: "Preston Arnold"
 role: "Full-Stack Developer & Builder"
 date: "2026-03-06"
