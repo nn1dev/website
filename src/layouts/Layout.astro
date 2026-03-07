@@ -57,7 +57,7 @@ const {
     <meta name="fediverse:creator" content="@nn1dev@mastodon.social" />
     {noIndex && <meta name="robots" content="noindex, nofollow" />}
 
-    <script>
+    <script is:inline>
       const userThemeCritical = localStorage.getItem("theme");
       const elmMeta = document.querySelector('meta[name="color-scheme"]');
       const elmHtml = document.querySelector("html");
