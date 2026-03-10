@@ -1,6 +1,6 @@
 import { defineAction, ActionError } from "astro:actions";
 import { API_AUTH, API_URL } from "astro:env/server";
-import { z } from "astro:schema";
+import { z } from "astro/zod";
 import * as Sentry from "@sentry/astro";
 
 export default defineAction({
@@ -8,14 +8,14 @@ export default defineAction({
   input: z
     .object({
       name: z.string().trim().max(255),
-      email: z.string().email().trim(),
+      email: z.email().trim(),
       newsletter: z.optional(z.string().transform((value) => value === "on")),
       eventId: z.string().transform((value) => parseInt(value)),
       eventName: z.string(),
       eventDate: z.string(),
       eventLocation: z.string(),
-      eventInviteUrlIcal: z.string().url(),
-      eventInviteUrlGoogle: z.string().url(),
+      eventInviteUrlIcal: z.url(),
+      eventInviteUrlGoogle: z.url(),
     })
     .strict(),
   handler: async ({

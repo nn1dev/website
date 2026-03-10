@@ -1,4 +1,5 @@
-import { z, defineCollection, reference } from "astro:content";
+import { defineCollection, reference } from "astro:content";
+import { z } from "astro/zod";
 import { glob } from "astro/loaders";
 
 const events = defineCollection({
@@ -14,11 +15,11 @@ const events = defineCollection({
         dateStart: z.coerce.date(),
         dateEnd: z.coerce.date(),
         location: z.string(),
-        locationUrl: z.string().url(),
+        locationUrl: z.url(),
         locationLatitude: z.string(),
         locationLongitude: z.string(),
         parking: z.string(),
-        parkingUrl: z.string().url(),
+        parkingUrl: z.url(),
         schedule: z.array(
           z
             .object({
@@ -64,17 +65,17 @@ const member = defineCollection({
         role: z.string(),
         image: image(),
         bio: z.string().optional(),
-        urlWebsite: z.string().url().optional(),
-        urlGitHub: z.string().url().optional(),
-        urlMastodon: z.string().url().optional(),
-        urlBluesky: z.string().url().optional(),
-        urlLinkedIn: z.string().url().optional(),
-        urlInstagram: z.string().url().optional(),
-        urlTwitter: z.string().url().optional(),
-        urlHuggingFace: z.string().url().optional(),
-        urlYouTube: z.string().url().optional(),
-        urlNuGet: z.string().url().optional(),
-        urlStackOverflow: z.string().url().optional(),
+        urlWebsite: z.url().optional(),
+        urlGitHub: z.url().optional(),
+        urlMastodon: z.url().optional(),
+        urlBluesky: z.url().optional(),
+        urlLinkedIn: z.url().optional(),
+        urlInstagram: z.url().optional(),
+        urlTwitter: z.url().optional(),
+        urlHuggingFace: z.url().optional(),
+        urlYouTube: z.url().optional(),
+        urlNuGet: z.url().optional(),
+        urlStackOverflow: z.url().optional(),
       })
       .strict(),
 });
@@ -89,16 +90,16 @@ const spotlight = defineCollection({
       image: image(),
       ogImage: image(),
       date: z.coerce.date(),
-      urlWebsite: z.string().url().optional(),
-      urlGitHub: z.string().url().optional(),
-      urlMastodon: z.string().url().optional(),
-      urlBluesky: z.string().url().optional(),
-      urlLinkedIn: z.string().url().optional(),
-      urlInstagram: z.string().url().optional(),
-      urlTwitter: z.string().url().optional(),
-      urlHuggingFace: z.string().url().optional(),
-      urlYouTube: z.string().url().optional(),
-      urlNuGet: z.string().url().optional(),
+      urlWebsite: z.url().optional(),
+      urlGitHub: z.url().optional(),
+      urlMastodon: z.url().optional(),
+      urlBluesky: z.url().optional(),
+      urlLinkedIn: z.url().optional(),
+      urlInstagram: z.url().optional(),
+      urlTwitter: z.url().optional(),
+      urlHuggingFace: z.url().optional(),
+      urlYouTube: z.url().optional(),
+      urlNuGet: z.url().optional(),
     }),
 });
 

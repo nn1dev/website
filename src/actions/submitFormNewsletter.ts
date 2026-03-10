@@ -1,6 +1,6 @@
 import * as Sentry from "@sentry/astro";
 import { defineAction, ActionError } from "astro:actions";
-import { z } from "astro:schema";
+import { z } from "astro/zod";
 
 import { API_AUTH, API_URL } from "astro:env/server";
 
@@ -8,7 +8,7 @@ export default defineAction({
   accept: "form",
   input: z
     .object({
-      email: z.string().email(),
+      email: z.email(),
     })
     .strict(),
   handler: async (input) => {

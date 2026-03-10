@@ -50,6 +50,6 @@ export async function getStaticPaths() {
       (event) => import.meta.env.MODE === "development" || !event.data.draft,
     )
     .map(({ data }) => ({
-      params: { eventId: data.id },
+      params: { eventId: data.id.toString() },
     }));
 }
