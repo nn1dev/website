@@ -2,7 +2,7 @@
   "id": 12,
   "ogImage": "./og.jpg",
   "draft": true,
-  "name": "#12: \"TBC\" by Jacek Miloszewski and \"TBC\" by Dylan Beattie",
+  "name": "#12: \"TBC\" by Jacek Miloszewski and \"There's No Such Thing As Plain Text\" by Dylan Beattie",
   "description": "TBC",
   "dateStart": "2026-05-28T17:00Z",
   "dateEnd": "2026-05-28T19:00Z",
@@ -32,7 +32,7 @@
     {
       "dateStart": "2026-05-28T18:15Z",
       "dateEnd": "2026-05-28T18:45Z",
-      "title": "\"TBC\" by Dylan Beattie"
+      "title": "\"There's No Such Thing As Plain Text\" by Dylan Beattie"
     }
   ],
   "speakers": ["jacek-miloszewski", "dylan-beattie"]
