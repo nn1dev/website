@@ -54,7 +54,7 @@ html {
 }
 
 body {
-  font-family: system-ui, sans-serif;
+  font-family: var(--font-inter), system-ui, sans-serif;
   font-size: var(--fz);
   line-height: var(--lh);
   color: var(--color-fg);

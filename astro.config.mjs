@@ -1,4 +1,4 @@
-import { defineConfig, envField } from "astro/config";
+import { defineConfig, envField, fontProviders } from "astro/config";
 import cloudflare from "@astrojs/cloudflare";
 import sentry from "@sentry/astro";
 import fs from "node:fs";
@@ -49,5 +49,13 @@ export default defineConfig({
     sitemap({
       filter: (page) => !EXCLUDED_ROUTES.includes(page),
     }),
+  ],
+  fonts: [
+    {
+      provider: fontProviders.fontsource(),
+      name: "Inter",
+      cssVariable: "--font-inter",
+      weights: [400, 600, 700, 800, 900],
+    },
   ],
 });
