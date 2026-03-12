@@ -17,6 +17,7 @@ export default defineConfig({
   site: "https://nn1.dev",
   adapter: cloudflare({
     imageService: "compile",
+    prerenderEnvironment: "node",
   }),
   env: {
     schema: {
