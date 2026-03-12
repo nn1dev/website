@@ -51,6 +51,7 @@ const dateStartParsed = new Intl.DateTimeFormat("en-GB", {
 }).format(eventDateStart);
 
 const qr = renderSVG(`https://nn1.dev/events/${eventId}/${ticketId}`);
+console.log({qr })
 
 function obfuscateName(fullName: string) {
   // Split the full name into parts
@@ -128,7 +129,9 @@ const isFutureEvent = eventDateStart.getTime() > Date.now();
             </dl>
           </div>
           <div class="ticket__code">
-            <Fragment set:html={qr} />
+            <div class="ticket__qr">
+              <Fragment set:html={qr} />
+            </div>
           </div>
         </div>
       </div>
@@ -250,12 +253,13 @@ const isFutureEvent = eventDateStart.getTime() > Date.now();
     border-radius: 14px;
     padding: var(--lh);
 
-    svg {
-      display: block;
-      width: 128px;
-      height: 128px;
-      fill: var(--color-fg);
-    }
+  }
+
+  .ticket__qr {
+    display: block;
+    width: 128px;
+    height: 128px;
+    fill: var(--color-fg);
   }
 
   .ticket__cancel {
