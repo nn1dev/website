@@ -82,6 +82,7 @@ const scheduleTimeFormat = (date: Date) =>
   }).format(date);
 
 const isUpcoming = new Date().getTime() < dateStart.getTime();
+const isReleased = !entry.data.draft;
 
 const inviteUrls = getInviteUrls({
   id,
@@ -100,7 +101,7 @@ const inviteUrls = getInviteUrls({
 >
   <Hero title={name} description={description}>
     {
-      isUpcoming && (
+      isUpcoming && isReleased && (
         <ButtonLink text="Get your ticket now" href="#get-your-ticket" />
       )
     }
@@ -268,7 +269,7 @@ const inviteUrls = getInviteUrls({
   }
 
   {
-    isUpcoming ? (
+    isUpcoming && isReleased ? (
       <Section style="contrast">
         <Container narrow>
           <form

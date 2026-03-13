@@ -1,4 +1,5 @@
 import { defineAction, ActionError } from "astro:actions";
+import { getEntry } from "astro:content";
 import { API_AUTH, API_URL } from "astro:env/server";
 import { z } from "astro/zod";
 import * as Sentry from "@sentry/astro";
@@ -34,6 +35,14 @@ export default defineAction({
       throw new ActionError({
         code: "BAD_REQUEST",
         message: "API_URL or API_AUTH is not defined.",
+      });
+    }
+
+    const event = await getEntry("events", String(eventId));
+    if (!event || event.data.draft) {
+      throw new ActionError({
+        code: "BAD_REQUEST",
+        message: "Tickets are not available for this event.",
       });
     }
 
