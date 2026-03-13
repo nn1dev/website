@@ -11,11 +11,11 @@ const { label, required, type, name, placeholder } = Astro.props;
 ---
 
 <div class="input">
-  <label class="input__label" for={name}
+  <label class="label" for={name}
     >{label} {required ? "(required)" : "(optional)"}</label
   >
   <input
-    class="input__field"
+    class="field"
     type={type}
     name={name}
     id={name}
@@ -29,13 +29,13 @@ const { label, required, type, name, placeholder } = Astro.props;
     width: 100%;
   }
 
-  .input__label {
+  .label {
     font-weight: 600;
     display: block;
     margin-block-end: calc(var(--lh) / 4);
   }
 
-  .input__field {
+  .field {
     display: block;
     font: inherit;
     width: 100%;
