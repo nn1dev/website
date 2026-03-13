@@ -310,7 +310,7 @@ const {
       .nav__inner {
         display: flex;
         flex-direction: column;
-        gap: 1.5lh;
+        gap: 1lh;
         padding: 1lh;
 
         @media (min-width: 800px) {
@@ -345,19 +345,18 @@ const {
         background: none;
         border: none;
         cursor: pointer;
-        padding: 0.75lh;
         background-color: var(--color-border);
         border-radius: var(--br);
         color: var(--color-fg-dim);
         position: relative;
+        display: grid;
+        place-items: center;
+        line-height: inherit;
+        width: 1lh;
+        height: 1lh;
 
         &[aria-pressed="true"] {
           color: var(--color-accent);
-          /* box-shadow: inset 0 0 0 1px var(--color-accent); */
-        }
-
-        @media (min-width: 800px) {
-          padding: 8px;
         }
 
         &:focus-visible {
@@ -421,8 +420,8 @@ const {
       }
 
       .theme-picker__icon {
-        width: 16px;
-        height: 16px;
+        width: 14px;
+        height: 14px;
         opacity: 0.75;
         display: block;
 
@@ -440,6 +439,30 @@ const {
         font-size: 14px;
         text-align: center;
         padding: calc(var(--lh) * 2) var(--lh);
+      }
+
+      @keyframes new {
+        from {
+          clip-path: polygon(100% 0%, 100% 0%, 100% 100%, 100% 100%);
+        }
+        to {
+          clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+        }
+      }
+
+      ::view-transition-old(root) {
+        animation: none;
+      }
+
+      ::view-transition-new(root) {
+        animation: 0.5s new forwards;
+      }
+
+      @media (prefers-reduced-motion) {
+        ::view-transition-old(*),
+        ::view-transition-new(*) {
+          animation: none !important;
+        }
       }
     </style>
   </body>
@@ -482,6 +505,22 @@ const {
     }
   }
 
+  function updateTheDOMSomehow(themeSelected: string) {
+    if (!elmMeta || !elmHtml) {
+      return;
+    }
+
+    if (themeSelected === "system") {
+      localStorage.removeItem("theme");
+      elmMeta.setAttribute("content", "dark light");
+      elmHtml.style.setProperty("color-scheme", "dark light");
+    } else {
+      localStorage.setItem("theme", themeSelected);
+      elmMeta.setAttribute("content", themeSelected);
+      elmHtml.style.setProperty("color-scheme", themeSelected);
+    }
+  }
+
   if (themePickerButtons) {
     themePickerButtons.forEach((button) => {
       button.addEventListener("click", (event) => {
@@ -496,19 +535,12 @@ const {
         event.currentTarget.setAttribute("aria-pressed", "true");
         const themeSelected = event.currentTarget.dataset.theme ?? "system";
 
-        if (!elmMeta || !elmHtml) {
+        if (!document.startViewTransition) {
+          updateTheDOMSomehow(themeSelected);
           return;
         }
 
-        if (themeSelected === "system") {
-          localStorage.removeItem("theme");
-          elmMeta.setAttribute("content", "dark light");
-          elmHtml.style.setProperty("color-scheme", "dark light");
-        } else {
-          localStorage.setItem("theme", themeSelected);
-          elmMeta.setAttribute("content", themeSelected);
-          elmHtml.style.setProperty("color-scheme", themeSelected);
-        }
+        document.startViewTransition(() => updateTheDOMSomehow(themeSelected));
       });
     });
   }
