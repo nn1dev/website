@@ -310,7 +310,7 @@ const {
       .nav__inner {
         display: flex;
         flex-direction: column;
-        gap: 1.5lh;
+        gap: 1lh;
         padding: 1lh;
 
         @media (min-width: 800px) {
@@ -345,19 +345,18 @@ const {
         background: none;
         border: none;
         cursor: pointer;
-        padding: 0.75lh;
         background-color: var(--color-border);
         border-radius: var(--br);
         color: var(--color-fg-dim);
         position: relative;
+        display: grid;
+        place-items: center;
+        line-height: inherit;
+        width: 1lh;
+        height: 1lh;
 
         &[aria-pressed="true"] {
           color: var(--color-accent);
-          /* box-shadow: inset 0 0 0 1px var(--color-accent); */
-        }
-
-        @media (min-width: 800px) {
-          padding: 8px;
         }
 
         &:focus-visible {
@@ -421,8 +420,8 @@ const {
       }
 
       .theme-picker__icon {
-        width: 16px;
-        height: 16px;
+        width: 14px;
+        height: 14px;
         opacity: 0.75;
         display: block;
 
