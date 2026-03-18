@@ -6,6 +6,7 @@ date: "2026-03-20"
 image: "./portrait.jpg"
 ogImage: "./og.jpg"
 urlLinkedIn: "http://www.linkedin.com/in/hlasoehtay"
+urlGitHub: "https://github.com/iamhlasoe"
 ---
 
 ## Who are you and what do you do?
