@@ -1,5 +1,4 @@
 ---
-draft: true
 name: "Hla Soe Htay"
 role: "ML & AI Engineer"
 date: "2026-03-20"
