@@ -32,7 +32,8 @@
     {
       "dateStart": "2026-05-28T18:15Z",
       "dateEnd": "2026-05-28T18:45Z",
-      "title": "\"There's No Such Thing As Plain Text\" by Dylan Beattie"
+      "title": "\"There's No Such Thing As Plain Text\" by Dylan Beattie",
+      "description": "When we say something is a plain text file, we’re relying on a huge number of assumptions - about operating systems, editors, file formats, language, culture, history… and, most of the time, that’s OK. But when it goes wrong, good old plain text can lead to some of the weirdest bugs you’ve ever seen. Join Dylan Beattie for a fascinating look into the hidden world of text files - from the history of mechanical teletypes, to how emoji skin tones actually work."
     }
   ],
   "speakers": ["jacek-miloszewski", "dylan-beattie"]
