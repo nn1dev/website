@@ -2,8 +2,8 @@
   "id": 12,
   "ogImage": "./og.jpg",
   "draft": true,
-  "name": "#12: \"TBC\" by Jacek Miloszewski and \"There's No Such Thing As Plain Text\" by Dylan Beattie",
-  "description": "TBC",
+  "name": "#12: \"Resilient Payment Systems: How bank transfers actually work (most of the time)\" by Jacek Miloszewski and \"There's No Such Thing As Plain Text\" by Dylan Beattie",
+  "description": "Ever wondered what really happens when you send money or save a file? Explore the hidden engineering: bank transfers at scale, the quirks of plain text, and the systems we all depend on but rarely understand.",
   "dateStart": "2026-05-28T17:00Z",
   "dateEnd": "2026-05-28T19:00Z",
   "location": "Vulcan Works, 34-38 Guildhall Rd, Northampton, NN1 1EW",
@@ -21,8 +21,8 @@
     {
       "dateStart": "2026-05-28T17:30Z",
       "dateEnd": "2026-05-28T18:00Z",
-      "title": "\"TBC\" by Jacek Miloszewski",
-      "description": ""
+      "title": "\"Resilient Payment Systems: How bank transfers actually work (most of the time)\" by Jacek Miloszewski",
+      "description": "Ever wondered what happens behind the scenes when you send money? In this talk, I’ll take you under the hood of how Form3 helps banks handle inter-bank transfers at scale. We’ll dive into the high-stakes world of security, compliance, and volume, and how we’ve built the architecture (and the teams) to handle it all. I'll cover the practical side of running a mission-critical system, including: scaling teams, regulatory hurdles and hardened Security."
     },
     {
       "dateStart": "2026-05-28T18:00Z",
