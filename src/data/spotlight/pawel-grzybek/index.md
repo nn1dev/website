@@ -24,9 +24,9 @@ Other than being a husband, father and writing code, I'm a proud organiser of [N
 
 ## What first got you into tech?
 
-I was into photography since I was 15. I learned the composition, the balance between film sensitivity to light, aperture and shutter speed using the cheap Russian tank, [Zenit 12XP](https://sovietcameras.org/zenit-12xp/). A few years later I got my first digital camera, and naturally I wanted to present my photos to everyone. The web was the perfect place for it, so I taught myself how to build a simple static website. I also enjoyed messing around with MySpace themes.
+I've been into photography since I was 15. I learnt the composition, the balance between film sensitivity to light, aperture and shutter speed using the cheap Russian tank, [Zenit 12XP](https://sovietcameras.org/zenit-12xp/). A few years later I got my first digital camera, and naturally I wanted to present my photos to everyone. The web was the perfect place for it, so I taught myself how to build a simple static website. I also enjoyed messing around with MySpace themes.
 
-Not long after that I realised that I enjoy building websites a lot more than taking photos or shifting pixels around in Photoshop or Fireworks (what a cool software it was). I’m glad that something that I was truly passionate about back then transitioned into my profession, and two decades later I’m still loving it.
+Not long after that I realised that I enjoyed building websites a lot more than taking photos or shifting pixels around in Photoshop or Fireworks (what cool software it was). I'm glad that something that I was truly passionate about back then transitioned into my profession, and two decades later I'm still loving it.
 
 ## What does your typical working day look like?
 
@@ -34,7 +34,7 @@ Every day I wake up around 4-5am, to kick my day off with a half an hour session
 
 Around 8am the whole family gathers in the kitchen, we listen to music, cook, dance, drink coffee and eat breakfast. Yes, we dance every day in the kitchen! Following that my girls either go to work or nursery and I continue working until my brain allows me to stay productive.
 
-Evenings are for family. We go for a walk, cook, chat, listen to more music, play, read books and things like that. We almost always do everything together. We have a TV, because we don't want to waste time in front of a TV.
+Evenings are for family. We go for a walk, cook, chat, listen to more music, play, read books and things like that. We almost always do everything together. We don't have a TV, because we don't want to waste time in front of a TV.
 
 I'm usually in bed sleeping like a baby by 10pm. My weekend routine is very similar to the school day routine, but the work time is spent with my family ❣️
 
@@ -84,7 +84,7 @@ In the typical [indie web](https://indieweb.org/) fashion, on my personal websit
 
 ## What's one thing about your profession you wish more people knew?
 
-Not only applicable to my profession but in general to our generation. Deep focus and patience is not people's domain and folks like to find shortcuts. We spend a lot of time on automations, optimisations of our workflows, finding the latest and greatest methods to run dozens of AI agents at the same time to optimise our productivity. The next day we wake up and we optimise our workflows because the best practice of yesterday is obsolete today. But…
+I have a little advice but not only for folks working in my profession but in general, for our generation. Deep focus and patience is not people's domain and folks keep on finding shortcuts. The average attention span for a given task is as long as the Instagram short. People spend a lot of time crafting a perfect automation striving for optimum efficiency, just to wake up the next day to improve their already obsolete automation. But...
 
 > You'd be surprised how much you will do in a day, if you just sit and do it.
 
@@ -96,5 +96,6 @@ This is a lesson I learnt from alligator rancher Bill Tregle from Louisiana. I w
 
 1. [Salt of the Earth - Natural Deodorant Crystal Classic](https://amzn.eu/d/0e4QZaZ8) - I tested every deodorant on this planet, but nothing beats this brick of salt!
 2. [Yellow Bourbon Coffee](https://www.yellowbourbon.co.uk/) - not only local, but really incredible coffee
-3. [WOLFBOX MF100 Compressed Air Duster](https://amzn.eu/d/00oDNeIG) - I also thought that I don't need an air blower, but now I have it and I use it all the time
-4.
+3. [WOLFBOX MF100 Compressed Air Duster](https://amzn.eu/d/00oDNeIG) - I also thought that I didn't need an air blower, but now I have it and I use it all the time
+4. [Magnatiles](https://magnatiles.com/) - If you have young kids, this is a tonnes of fun (not only for kids)
+5. [New Balance Series 990](https://www.newbalance.co.uk/men/shop-by-model/990/) - The most comfortable kicks ever
