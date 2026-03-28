@@ -35,5 +35,26 @@
       "description": " The way developers work is changing. Remote work, AI, and automation mean we have more leverage than ever — yet many teams are still trapped in endless meetings, interruptions, and slow-moving projects. This talk explores why smaller, async teams are becoming a competitive advantage, and what it takes to work this way effectively."
     }
   ],
-  "speakers": ["oliver-medhurst", "rob-hough"]
+  "speakers": ["oliver-medhurst", "rob-hough"],
+  "images": [
+    {
+      "src": "./gallery/1.jpg",
+      "caption": "Oliver presentint at the NN1 Dev Club #11"
+    },
+    {
+      "src": "./gallery/2.jpg",
+      "caption": "Rob presentint at the NN1 Dev Club #11"
+    },
+    {
+      "src": "./gallery/3.jpg",
+      "caption": "Rob presentint at the NN1 Dev Club #11"
+    }
+  ],
+  "videos": [
+    {
+      "youtubeId": "fB5WSBqS-nQ",
+      "poster": "./posters/1.jpg",
+      "caption": "\"Future of Work is Async\" by Rob Hough"
+    }
+  ]
 }

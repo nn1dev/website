@@ -478,5 +478,21 @@ const { Content, headings } = await render(entry);
     ol {
       margin-inline-start: 1lh;
     }
+
+    blockquote {
+      padding: 1lh;
+      background: var(--color-border);
+      border-inline-start: calc(1lh / 4) solid var(--color-border-light);
+    }
+
+    blockquote p {
+      margin: 0;
+      font-style: italic;
+    }
+
+    iframe {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+    }
   }
 </style>
