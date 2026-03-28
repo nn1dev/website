@@ -1,5 +1,4 @@
 ---
-draft: true
 name: "Pawel Grzybek"
 role: "Software Engineer"
 date: "2026-04-03"
