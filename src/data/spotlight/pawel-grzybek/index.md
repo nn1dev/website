@@ -19,23 +19,23 @@ I've been building software professionally for the past 15 years. The trendy job
 
 ![Pawel Grzybek portrait](portrait.jpg)
 
-Other than being a husband, father and writing code, I'm a proud organiser of [NN1 Dev Club](https://nn1.dev). I'm also a keen [blogger](https://pawelgrzybek.com/), open source contributor, a shit photographer and most of my pocket money I spend on [hip-hop records](https://pawelgrzybek.com/music).
+Other than being a husband, father and developer, I'm a proud organiser of [NN1 Dev Club](https://nn1.dev). I'm also a keen [blogger](https://pawelgrzybek.com/), open source contributor, a shit photographer and most of my spare money I spend on [hip-hop records](https://pawelgrzybek.com/music).
 
 ## What first got you into tech?
 
 I've been into photography since I was 15. I learnt the composition, the balance between film sensitivity to light, aperture and shutter speed using the cheap Russian tank, [Zenit 12XP](https://sovietcameras.org/zenit-12xp/). A few years later I got my first digital camera, and naturally I wanted to present my photos to everyone. The web was the perfect place for it, so I taught myself how to build a simple static website. I also enjoyed messing around with MySpace themes.
 
-Not long after that I realised that I enjoyed building websites a lot more than taking photos or shifting pixels around in Photoshop or Fireworks (what cool software it was). I'm glad that something that I was truly passionate about back then transitioned into my profession, and two decades later I'm still loving it.
+Not long after that I realised that I enjoyed building websites a lot more than taking photos or shifting pixels around in Photoshop or Fireworks (what a cool software that was). I'm glad that something that I was truly passionate about back then transitioned into my profession, and two decades later I'm still loving it.
 
 ## What does your typical working day look like?
 
 Every day I wake up around 4-5am, to kick my day off with a half an hour session of stretching and light exercises (abs, push-ups and squats). Nothing hardcore but every day. Coffee and podcast or audiobook are a perfect companion for my morning routine. I'm the most productive in the morning, so following that I zone out, get into the deep focus working state and try to accomplish as much work as possible. This state lasts until my lovely little human being wakes up.
 
-Around 8am the whole family gathers in the kitchen, we listen to music, cook, dance, drink coffee and eat breakfast. Yes, we dance every day in the kitchen! Following that my girls either go to work or nursery and I continue working until my brain allows me to stay productive.
+Around 8am the whole family gathers in the kitchen, we listen to music, cook, dance, drink coffee and eat breakfast. Yes, we dance every day in the kitchen! Following that my girls either go to work/nursery or their weekly adventures, and I continue working until my brain allows me to stay productive.
 
 Evenings are for family. We go for a walk, cook, chat, listen to more music, play, read books and things like that. We almost always do everything together. We don't have a TV, because we don't want to waste time in front of a TV.
 
-I'm usually in bed sleeping like a baby by 10pm. My weekend routine is very similar to the school day routine, but the work time is spent with my family ❣️
+I'm usually in bed sleeping like a baby by 10pm. My weekend routine is very similar to the work day routine, but the work time is spent with my family ❣️
 
 ## What's your setup? Software and hardware. Pictures welcomed!
 
