@@ -19,7 +19,7 @@ I've been building software professionally for the past 15 years. The trendy job
 
 ![Pawel Grzybek portrait](portrait.jpg)
 
-Other than being a husband, father and developer, I'm a proud organiser of [NN1 Dev Club](https://nn1.dev). I'm also a keen [blogger](https://pawelgrzybek.com/), open source contributor, a shit photographer and most of my spare money I spend on [hip-hop records](https://pawelgrzybek.com/music).
+Other than being a husband, father and developer, I'm a proud organiser of [NN1 Dev Club](https://nn1.dev), keen [blogger](https://pawelgrzybek.com/), open source contributor, a shit photographer and most of my spare money I spend on [hip-hop records](https://pawelgrzybek.com/music).
 
 ## What first got you into tech?
 
@@ -83,7 +83,7 @@ In the typical [indie web](https://indieweb.org/) fashion, on my personal websit
 
 ## What's one thing about your profession you wish more people knew?
 
-I have a little advice but not only for folks working in my profession but in general, for our generation. Deep focus and patience is not people's domain and folks keep on finding shortcuts. The average attention span for a given task is as long as the Instagram short. People spend a lot of time crafting a perfect automation striving for optimum efficiency, just to wake up the next day to improve their already obsolete automation. But...
+I have a little advice not only for folks working in my profession but in general, for our generation. Deep focus and patience is not people's domain and folks keep on finding shortcuts. The average attention span for a given task is as long as the Instagram short. People spend a lot of time crafting a perfect automation striving for optimum efficiency, just to wake up the next day to improve their already obsolete automation. But...
 
 > You'd be surprised how much you will do in a day, if you just sit and do it.
 
@@ -97,4 +97,5 @@ This is a lesson I learnt from alligator rancher Bill Tregle from Louisiana. I w
 2. [Yellow Bourbon Coffee](https://www.yellowbourbon.co.uk/) - not only local, but really incredible coffee
 3. [WOLFBOX MF100 Compressed Air Duster](https://amzn.eu/d/00oDNeIG) - I also thought that I didn't need an air blower, but now I have it and I use it all the time
 4. [Magnatiles](https://magnatiles.com/) - If you have young kids, this is a tonnes of fun (not only for kids)
-5. [New Balance Series 990](https://www.newbalance.co.uk/men/shop-by-model/990/) - The most comfortable kicks ever
+5. [New Balance Series 990](https://www.newbalance.co.uk/men/shop-by-model/990/) - The most comfortable kicks money can buy
+6. RSS

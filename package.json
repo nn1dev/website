@@ -28,6 +28,6 @@
     "@types/sanitize-html": "^2.16.1",
     "prettier": "^3.8.1",
     "prettier-plugin-astro": "^0.14.1",
-    "wrangler": "^4.77.0"
+    "wrangler": "^4.78.0"
   }
 }
