@@ -544,106 +544,108 @@ const { Content, headings } = await render(entry);
 </style>
 
 <script>
-  const player = document.querySelector<HTMLElement>('.player')
-  if (!player) return
+  (() => {
+    const player = document.querySelector<HTMLElement>('.player')
+    if (!player) return
 
-  const state = {
-    elapsed: 0,
-    ticker: null as ReturnType<typeof setInterval> | null,
-  }
-
-  const src    = player.dataset.src ?? ''
-  const btn    = player.querySelector<HTMLButtonElement>('.player__btn')!
-  const timeEl = player.querySelector<HTMLElement>('.player__time')!
-
-  const fmt = (s: number) =>
-    isNaN(s) ? '0:00' : `${Math.floor(s / 60)}:${Math.floor(s % 60).toString().padStart(2, '0')}`
-
-  const setPlaying = (on: boolean) => {
-    player.toggleAttribute('data-playing', on)
-    btn.setAttribute('aria-pressed', String(on))
-    btn.setAttribute('aria-label', on ? 'Pause interview' : 'Play interview')
-  }
-
-  const stopTicker = () => {
-    clearInterval(state.ticker ?? undefined)
-    state.ticker = null
-  }
-
-  const startTicker = (getTime: () => number) => {
-    stopTicker()
-    state.ticker = setInterval(() => {
-      timeEl.textContent = fmt(getTime())
-    }, 500)
-  }
-
-  const reset = () => {
-    stopTicker()
-    state.elapsed = 0
-    timeEl.textContent = '0:00'
-    setPlaying(false)
-  }
-
-  if (src) {
-    // interview audio file in frontmatter
-    const audio = new Audio(src)
-    audio.addEventListener('ended', reset)
-
-    btn.addEventListener('click', () => {
-      if (audio.paused) {
-        audio.play()
-        setPlaying(true)
-        startTicker(() => audio.currentTime)
-      } else {
-        audio.pause()
-        stopTicker()
-        setPlaying(false)
-      }
-    })
-
-    document.addEventListener('astro:before-swap', () => {
-      audio.pause()
-      reset()
-    }, { once: true })
-
-  } else {
-    // tts fallback
-    const getText = () =>
-      Array.from(document.querySelectorAll<HTMLElement>('.article__content h2'))
-        .flatMap(h => {
-          const parts = [h.textContent ?? '']
-          let el = h.nextElementSibling
-          while (el && el.tagName !== 'H2') {
-            if (el.textContent) parts.push(el.textContent.trim())
-            el = el.nextElementSibling
-          }
-          return parts
-        })
-        .join(' ')
-
-    const speak = (text: string) => {
-      const u = new SpeechSynthesisUtterance(text)
-      u.onend = reset
-      speechSynthesis.speak(u)
+    const state = {
+      elapsed: 0,
+      ticker: null as ReturnType<typeof setInterval> | null,
     }
 
-    btn.addEventListener('click', () => {
-      if (speechSynthesis.speaking || speechSynthesis.pending) {
+    const src    = player.dataset.src ?? ''
+    const btn    = player.querySelector<HTMLButtonElement>('.player__btn')!
+    const timeEl = player.querySelector<HTMLElement>('.player__time')!
+
+    const fmt = (s: number) =>
+      isNaN(s) ? '0:00' : `${Math.floor(s / 60)}:${Math.floor(s % 60).toString().padStart(2, '0')}`
+
+    const setPlaying = (on: boolean) => {
+      player.toggleAttribute('data-playing', on)
+      btn.setAttribute('aria-pressed', String(on))
+      btn.setAttribute('aria-label', on ? 'Pause interview' : 'Play interview')
+    }
+
+    const stopTicker = () => {
+      clearInterval(state.ticker ?? undefined)
+      state.ticker = null
+    }
+
+    const startTicker = (getTime: () => number) => {
+      stopTicker()
+      state.ticker = setInterval(() => {
+        timeEl.textContent = fmt(getTime())
+      }, 500)
+    }
+
+    const reset = () => {
+      stopTicker()
+      state.elapsed = 0
+      timeEl.textContent = '0:00'
+      setPlaying(false)
+    }
+
+    if (src) {
+      // interview audio file in frontmatter
+      const audio = new Audio(src)
+      audio.addEventListener('ended', reset)
+
+      btn.addEventListener('click', () => {
+        if (audio.paused) {
+          audio.play()
+          setPlaying(true)
+          startTicker(() => audio.currentTime)
+        } else {
+          audio.pause()
+          stopTicker()
+          setPlaying(false)
+        }
+      })
+
+      document.addEventListener('astro:before-swap', () => {
+        audio.pause()
+        reset()
+      }, { once: true })
+
+    } else {
+      // tts fallback
+      const getText = () =>
+        Array.from(document.querySelectorAll<HTMLElement>('.article__content h2'))
+          .flatMap(h => {
+            const parts = [h.textContent ?? '']
+            let el = h.nextElementSibling
+            while (el && el.tagName !== 'H2') {
+              if (el.textContent) parts.push(el.textContent.trim())
+              el = el.nextElementSibling
+            }
+            return parts
+          })
+          .join(' ')
+
+      const speak = (text: string) => {
+        const u = new SpeechSynthesisUtterance(text)
+        u.onend = reset
+        speechSynthesis.speak(u)
+      }
+
+      btn.addEventListener('click', () => {
+        if (speechSynthesis.speaking || speechSynthesis.pending) {
+          speechSynthesis.cancel()
+          reset()
+        } else {
+          speak(getText())
+          setPlaying(true)
+          const start = Date.now()
+          startTicker(() => (Date.now() - start) / 1000)
+        }
+      })
+
+      document.addEventListener('astro:before-swap', () => {
         speechSynthesis.cancel()
         reset()
-      } else {
-        speak(getText())
-        setPlaying(true)
-        const start = Date.now()
-        startTicker(() => (Date.now() - start) / 1000)
-      }
-    })
-
-    document.addEventListener('astro:before-swap', () => {
-      speechSynthesis.cancel()
-      reset()
-    }, { once: true })
-  }
+      }, { once: true })
+    }
+  })()
 </script>
 
 <style is:global>
