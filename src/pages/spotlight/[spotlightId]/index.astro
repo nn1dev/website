@@ -37,6 +37,7 @@ const {
     role,
     date,
     ogImage,
+    interview,
     urlWebsite,
     urlGitHub,
     urlMastodon,
@@ -65,6 +66,7 @@ const { Content, headings } = await render(entry);
           <div class="article__header">
             <Heading title={name} level={1} />
             <p class="article__role">{role}</p>
+            {interview && <audio src={interview} controls class="article__interview"></audio>}
             <ul class="socials">
               {
                 urlWebsite ? (
@@ -368,6 +370,10 @@ const { Content, headings } = await render(entry);
     @container (min-width: 900px) {
       grid-column: span 2;
     }
+  }
+
+  .article__interview {
+    margin: 1rem 0;
   }
 
   .article__content {
