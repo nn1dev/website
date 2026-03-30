@@ -2,7 +2,7 @@
   "id": 13,
   "ogImage": "./og.jpg",
   "draft": true,
-  "name": "#13: \"TBC\" by TBC and \"TBC\" by TBC",
+  "name": "#13: \"TBC\" by Diana Silva and \"TBC\" by Ana Rodrigues",
   "description": "TBC",
   "dateStart": "2026-09-24T17:00Z",
   "dateEnd": "2026-09-24T19:00Z",
@@ -21,7 +21,7 @@
     {
       "dateStart": "2026-09-24T17:30Z",
       "dateEnd": "2026-09-24T18:00Z",
-      "title": "\"TBC\" by TBC",
+      "title": "\"TBC\" by Diana Silva",
       "description": ""
     },
     {
@@ -32,7 +32,7 @@
     {
       "dateStart": "2026-09-24T18:15Z",
       "dateEnd": "2026-09-24T18:45Z",
-      "title": "\"TBC\" by TBC"
+      "title": "\"TBC\" by Ana Rodrigues"
     }
   ],
   "speakers": []
