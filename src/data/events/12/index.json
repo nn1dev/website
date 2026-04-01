@@ -21,7 +21,7 @@
       "dateStart": "2026-05-28T17:30Z",
       "dateEnd": "2026-05-28T18:00Z",
       "title": "\"Resilient Payment Systems: How bank transfers actually work (most of the time)\" by Jacek Miloszewski",
-      "description": "Ever wondered what happens behind the scenes when you send money? In this talk, I’ll take you under the hood of how Form3 helps banks handle inter-bank transfers at scale. We’ll dive into the high-stakes world of security, compliance, and volume, and how we’ve built the architecture (and the teams) to handle it all. I'll cover the practical side of running a mission-critical system, including: scaling teams, regulatory hurdles and hardened Security."
+      "description": "Ever wondered what happens behind the scenes when you send money? In this talk, I’ll take you under the hood of how Form3 helps banks handle inter-bank transfers at scale. We’ll dive into the high-stakes world of security, compliance, and volume, and how we’ve built the architecture (and the teams) to handle it all. I'll cover the practical side of running a mission-critical system, including: scaling teams, regulatory hurdles and hardened security."
     },
     {
       "dateStart": "2026-05-28T18:00Z",
