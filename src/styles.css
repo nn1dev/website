@@ -32,9 +32,12 @@
   color: var(--color-text);
 }
 
-@view-transition {
-  navigation: auto;
-}
+/* high chance that this causes a lot of Sentry errors,
+* I'm disabling that for now to see if it improves anything, if yes,
+* i will re-enable that back and try to understand what the hell is going on */
+/* @view-transition { */
+/*   navigation: auto; */
+/* } */
 
 html {
   background: var(--color-bg);
