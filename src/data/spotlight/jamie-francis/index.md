@@ -17,17 +17,17 @@ My day-to-day is mostly about managing the high volume infrastructure that keeps
 
 I didn't start in DevOps/platform engineering, though. I’ve got a broad background including C# development, team leadership, and even IT training and support, plus a number of non-IT roles in the first part of my career. The "generalist" path has been a massive advantage as it means I’m not just looking at the infrastructure in a vacuum. I actually understand the developer experience and the CI/CD hurdles they face, plus I've got plenty of experience working in various industries.
 
-When I’m not digging through K8s manifests, I'm usually obsessing over cars. I'm constantly on AutoTrader or Pistonheads looking for my next unnecessary purchase to replace the BMW M2 I sold a while back. I live with my girlfriend and step-son, and usually spend my evenings trying to do the maths on a suitably unsuitable vehicle.
+When I’m not digging through K8s manifests, I'm usually obsessing over cars. I'm constantly on AutoTrader or Pistonheads looking for my next unnecessary purchase to replace the BMW M2 I sold a while back. I live in Northampton with my girlfriend and step-son, and usually spend my evenings trying to do the maths on a suitably unsuitable vehicle. I also love to cook - Italian food is my preference and I'd like to get an outdoor kitchen setup so I can BBQ all year round.
 
 ## What first got you into tech?
 
-We had various computers when I was growing up, things like Spectrums then later Amstrad, 386/486, etc. I'd always try to work out how to play games on them, which wasn't always easy. I started building my own computers later on, again for playing games.
+We had various computers when I was growing up, things like Spectrums then later Amstrad, 386/486, etc. I'd always try to work out how to play games on them, which wasn't always easy. I started building my own computers later on, again for playing games, but also messing around with code and stuff. I'd credit computer building for honing my troubleshooting skills. Having to fix things like IRQ settings without the internet to help you was not always easy! Later on, dial-up internet was so slow that you'd probably give up and [RTFM](https://en.wikipedia.org/wiki/RTFM) instead.
 
 In terms of software I have always been into coding in one way or another. I remember writing scripts for the IRC client "mIRC" to do cool stuff. I realised that I liked making software my own. One minute you're just a user in a chat, and then with a few lines of script, you can automate responses, kick people, or even build entire tools inside the client. I realised that you don't always have to accept how software works out of the box.
 
-I also made really bad websites in Geocities, then later would use Dreamweaver or similar to make slightly less bad websites about skateboarding and similar things. This was before Javascript was common on the web, everything was just HTML/CSS.
+I did used to enjoy web development but these days prefer backend or infrastructure. I remember making really bad websites in Geocities, then later would use Dreamweaver or similar to make slightly less bad websites about skateboarding, mountain biking, games, etc! This was before Javascript was common on the web, everything was just HTML/CSS.
 
-I'd also credit computer building for honing my troubleshooting skills. Having to fix things like IRQ settings without the internet to help you was not always easy! Later on, dial-up internet was so slow that you'd probably give up and [RTFM](https://en.wikipedia.org/wiki/RTFM) instead.
+I've always had a desktop computer of some description and made space for a proper desk wherever I have lived. I've also got some network equipment which I'll talk about later.
 
 ## What does your typical working day look like?
 
@@ -51,7 +51,7 @@ I've got a mini-KVM to switch mouse/keyboard inputs between the work laptop and 
 
 ### Home PC / Gaming rig
 
-For home use.. I've got a gaming PC that runs Windows 11 and spends more time operating as a developer machine/YouTube client than a gaming PC.
+For home use.. I've got a gaming PC that runs Windows 11 and spends more time operating as a YouTube client or dev machine than a gaming PC.
 
 - AMD 5700X3D with Arctic Freezer II AIO
 - 32GB RAM
@@ -63,16 +63,18 @@ For home use.. I've got a gaming PC that runs Windows 11 and spends more time op
 - BenQ lightbar
 - Razer Siren microphone
 - Sony WH-1000XM4 headphones
+- Lian Li O11-D case with loads of fans that I want to replace with quieter ones
+- Software: Steam, Firefox, vscode...
 
 ![Jamie's setup](setup1.jpg)
 
 ## What’s the last piece of work you feel proud of?
 
-The new Kubernetes clusters at work, which are entirely IaC and support all the latest GCP/GKE features like Gateway API. Big improvement on the older setup!
+The new Kubernetes clusters at work, which are entirely IaC and support all the latest GCP/GKE features like Gateway API & Dataplane V2. Big improvement on the older setup and should be more cost effective and perform way better!
 
 ### Home network
 
-At home, my network maybe deserves a mention because it's a bit OTT for a home setup!
+At home, my network maybe deserves a mention because it's a bit OTT for a home setup! This is the current iteration that's been through many different configurations. I did used to have exclusively Ubiquiti equipment, but now have a mix of vendors.
 
 - Mikrotik RB5009 router - Core routing, firewall, PPPoE WAN, DNS forwarding, DHCP
 - Mikrotik CRS326 switch - VLAN switching and port management
@@ -80,7 +82,7 @@ At home, my network maybe deserves a mention because it's a bit OTT for a home s
 - 2x DNS servers (Raspberry Pi4's) - AdGuard Home and CoreDNS
 - Cyberpower ~750w UPS
 
-All housed in a wall-mounted 9U rack, with plenty of labels.
+All housed in a wall-mounted 9U rack in my garage, with plenty of labels. I've terminated my cat6 cables to a patch panel and tried my best to make it look fairly tidy.
 
 The infrastructure is defined as code using OpenTofu for network device configuration (firewall rules, VLANs, routing, NAT) and Ansible roles for service deployment/DNS - including certificate management and renewal, NUT for the UPS, Grafana dashboards for various metrics, 'homepage' dashboard, Traefik for routing, and an NTP server. Plus lots of other things that i've forgotten.
 
@@ -90,7 +92,7 @@ The whole setup is documented and can be quickly re-deployed anywhere with simil
 
 ![Jamie's setup](setup2.jpg)
 
-Oh and I have an Unraid server with about 90TB of storage for all the blu-rays I've ripped and serve via Plex.
+Oh and I have an Unraid server with about 90TB of storage for all the blu-rays I've ripped and serve via Plex. The server is an Intel i5-10500T CPU, 32GB RAM, 9 3.5" enterprise HDDs of various capacities, 2 NVMEs (for cache purposes), housed in a Fractal Define7 XL case. I had to use a SAS card to expand the amount of HDDs I could install.
 
 ## What’s one thing about your profession you wish more people knew?
 
