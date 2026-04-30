@@ -13,7 +13,7 @@ I’m Jamie, Lead Platform Engineer for the Toolstation/Travis Perkins group, wh
 
 My day-to-day is mostly about managing the high volume infrastructure that keeps the retail side of Toolstation moving in the UK, the Netherlands and Belgium. This is everything from the public facing websites (~5-10 million hits a day) to the heavy-lifting backend systems for stock and logistics. It's a containerised environment running on Kubernetes. I joined after the initial platform was built during the COVID rush, so my focus now is on moving us through a massive modernisation and optimisation phase to make it all more resilient and cost-effective.
 
-![Jamie Francis](avatar.jpg)
+![Jamie Francis](portrait.jpg)
 
 I didn't start in DevOps/platform engineering, though. I’ve got a broad background including C# development, team leadership, and even IT training and support, plus a number of non-IT roles in the first part of my career. The "generalist" path has been a massive advantage as it means I’m not just looking at the infrastructure in a vacuum. I actually understand the developer experience and the CI/CD hurdles they face, plus I've got plenty of experience working in various industries.
 
