@@ -1,5 +1,6 @@
 ---
 import { getCollection } from "astro:content";
+import { Image } from "astro:assets";
 import Container from "../components/Container.astro";
 import Heading from "../components/Heading.astro";
 import Section from "../components/Section.astro";
@@ -11,6 +12,8 @@ const events = (await getCollection("events"))
     (event) => import.meta.env.MODE === "development" || !event.data.draft,
   )
   .sort((a, b) => parseInt(b.id) - parseInt(a.id));
+
+const allFeedback = await getCollection("feedback");
 
 const eventsUpcoming = events.filter((e) => isUpcoming(e.data.dateStart));
 const eventsPast = events.filter((e) => !isUpcoming(e.data.dateStart));
@@ -127,8 +130,126 @@ const formatTime = (date: Date) =>
           ))
         }
       </div>
+      <Heading level={2} title="What people say" anchor />
     </div>
   </Container>
+  <div class="feedback__grid">
+    {
+      allFeedback.map(({ data: { image, name, role, quote } }) => (
+        <div class="feedback__item">
+          <div class="feedback__item-content">
+            <blockquote class="feedback__item-quote">{quote}</blockquote>
+            <div class="feedback__item-author">
+              <Image
+                src={image}
+                alt={name}
+                width="48"
+                height="48"
+                loading="lazy"
+                class="feedback__item-author-image"
+              />
+              <div class="feedback__item-author-info">
+                <p class="feedback__item-author-name">{name}</p>
+                {role ? <p class="feedback__item-author-role">{role}</p> : null}
+              </div>
+            </div>
+          </div>
+        </div>
+      ))
+    }
+    {
+      allFeedback.map(({ data: { image, name, role, quote } }) => (
+        <div class="feedback__item">
+          <div class="feedback__item-content">
+            <blockquote class="feedback__item-quote">{quote}</blockquote>
+            <div class="feedback__item-author">
+              <Image
+                src={image}
+                alt={name}
+                width="48"
+                height="48"
+                loading="lazy"
+                class="feedback__item-author-image"
+              />
+              <div class="feedback__item-author-info">
+                <p class="feedback__item-author-name">{name}</p>
+                {role ? <p class="feedback__item-author-role">{role}</p> : null}
+              </div>
+            </div>
+          </div>
+        </div>
+      ))
+    }
+    {
+      allFeedback.map(({ data: { image, name, role, quote } }) => (
+        <div class="feedback__item">
+          <div class="feedback__item-content">
+            <blockquote class="feedback__item-quote">{quote}</blockquote>
+            <div class="feedback__item-author">
+              <Image
+                src={image}
+                alt={name}
+                width="48"
+                height="48"
+                loading="lazy"
+                class="feedback__item-author-image"
+              />
+              <div class="feedback__item-author-info">
+                <p class="feedback__item-author-name">{name}</p>
+                {role ? <p class="feedback__item-author-role">{role}</p> : null}
+              </div>
+            </div>
+          </div>
+        </div>
+      ))
+    }
+    {
+      allFeedback.map(({ data: { image, name, role, quote } }) => (
+        <div class="feedback__item">
+          <div class="feedback__item-content">
+            <blockquote class="feedback__item-quote">{quote}</blockquote>
+            <div class="feedback__item-author">
+              <Image
+                src={image}
+                alt={name}
+                width="48"
+                height="48"
+                loading="lazy"
+                class="feedback__item-author-image"
+              />
+              <div class="feedback__item-author-info">
+                <p class="feedback__item-author-name">{name}</p>
+                {role ? <p class="feedback__item-author-role">{role}</p> : null}
+              </div>
+            </div>
+          </div>
+        </div>
+      ))
+    }
+    {
+      allFeedback.map(({ data: { image, name, role, quote } }) => (
+        <div class="feedback__item">
+          <div class="feedback__item-content">
+            <blockquote class="feedback__item-quote">{quote}</blockquote>
+            <div class="feedback__item-author">
+              <Image
+                src={image}
+                alt={name}
+                width="48"
+                height="48"
+                loading="lazy"
+                class="feedback__item-author-image"
+              />
+              <div class="feedback__item-author-info">
+                <p class="feedback__item-author-name">{name}</p>
+                {role ? <p class="feedback__item-author-role">{role}</p> : null}
+              </div>
+            </div>
+          </div>
+        </div>
+      ))
+    }
+  </div>
 </Section>
 
 {
@@ -294,5 +415,83 @@ const formatTime = (date: Date) =>
     color: var(--color-accent);
     text-decoration: underline;
     font-size: calc(var(--fz) * 0.875);
+  }
+
+  .feedback__grid {
+    display: grid;
+    gap: var(--lh);
+    /* TODO: awful spacing hack, this whole section needs to be redone */
+    margin-block-start: calc(var(--lh) * 2);
+    padding-inline: var(--lh);
+
+    grid-auto-flow: column;
+    grid-auto-columns: 80%;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+
+    @media (min-width: 800px) {
+      grid-auto-columns: 44%;
+    }
+    @media (min-width: 1100px) {
+      grid-auto-columns: 31%;
+    }
+    @media (min-width: 1600px) {
+      grid-auto-columns: 21%;
+    }
+  }
+
+  .feedback__item {
+    scroll-snap-align: center;
+
+    display: flex;
+    flex-direction: column;
+
+    box-shadow: inset 0 0 0 1px var(--color-border);
+    background-color: var(--color-bg);
+    padding: calc(var(--lh) * 0.75);
+    border-radius: var(--br);
+  }
+
+  .feedback__item-content {
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--lh) * 0.75);
+    flex-grow: 1;
+  }
+
+  .feedback__item-quote {
+    font-style: italic;
+    flex-grow: 1;
+  }
+
+  .feedback__item-author {
+    display: flex;
+    flex-direction: row;
+    gap: 0.25lh;
+  }
+
+  .feedback__item-author-image {
+    width: 2lh;
+    height: 2lh;
+    object-fit: cover;
+    border-radius: var(--br);
+  }
+
+  .feedback__item-author-info {
+    min-width: 1px;
+    flex-grow: 1;
+  }
+
+  .feedback__item-author-name {
+    font-weight: 600;
+  }
+
+  .feedback__item-author-role {
+    font-size: 14px;
+    opacity: 0.5;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 </style>
