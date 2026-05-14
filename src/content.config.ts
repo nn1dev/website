@@ -108,6 +108,7 @@ const feedback = defineCollection({
   schema: ({ image }) =>
     z
       .object({
+        id: z.number(),
         image: image(),
         name: z.string(),
         role: z.string().optional(),
