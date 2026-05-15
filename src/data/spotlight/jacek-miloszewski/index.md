@@ -20,6 +20,12 @@ Then I learned that there’s quite a big gap between "executing my own code fro
 
 ## What does your typical working day look like?
 
+It's a very typical WFH day, I guess. I wake up at 7:00, have breakfast and coffee with my wife and kids, get them ready, and then drive them to school.
+
+Work starts at 9:00 with a 30-minute chat with my colleagues—sometimes about work, but mostly about how everyone is doing. Then, I am usually off to work on my current tasks, whether that's building new features for our US gateway or doing some cloud networking plumbing. I am blessed to work for a company that understands that big Zoom meetings are rather counterproductive, so I usually don’t have any meetings throughout the day.
+
+I typically take a one-hour lunch break to eat something quickly and go cycling, or read a book if the weather is crap (which is most of the time). I finish around 18:00, eat supper, put the kids to sleep, and that’s my day!
+
 ## What's your setup? Software and hardware. Pictures welcomed!
 
 I mostly work from home. I have a dual setup with a work-issued MacBook Pro and an old Framework Laptop 13, both connected to a KVM switch that feeds into an ultrawide monitor. Other fun things I have include a Bambulab P1S 3D printer and a Desktronic standing desk.
