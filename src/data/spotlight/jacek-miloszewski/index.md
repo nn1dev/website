@@ -1,6 +1,6 @@
 ---
 name: "Jacek Miloszewski"
-role: ""
+role: "Software Engineer at Form3"
 date: "2026-05-29"
 image: "avatar.jpg"
 ogImage: "og.jpg"
@@ -11,6 +11,8 @@ urlGitHub: "https://github.com/jmilosze"
 ## Who are you and what do you do?
 
 Hi, I’m Jacek, a software engineer at Form3. During my regular 9-to-5, I am mainly responsible for developing and running the backend of our US instant payment system. When I’m not working, I spend time with my wife and two lovely kids. Sometimes I have time to attend to one of my many hobbies: making random websites, home automation, building Lego, 3D printing, and probably a few more I’ve forgotten.
+
+![Jacek Miloszewski](portrait.jpg)
 
 ## What first got you into tech?
 
