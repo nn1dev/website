@@ -4,7 +4,7 @@ role: "Application Analyst at Maples Group"
 date: "2026-05-15"
 image: "avatar.jpg"
 ogImage: "og.jpg"
-urlLinkedIn: "https://discord.com/channels/@me/1491017461703770293/1499121895159632057"
+urlLinkedIn: "https://www.linkedin.com/in/jacob-w-2365b8108/"
 ---
 
 ## Who are you and what do you do?
