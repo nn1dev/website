@@ -136,7 +136,7 @@ const formatTime = (date: Date) =>
   <div class="feedback__grid">
     {
       allFeedback
-        .sort((a, b) => (a.id > b.id ? -1 : 1))
+        .sort((a, b) => (a.data.id < b.data.id ? -1 : 1))
         .map(({ data: { image, name, role, quote } }) => (
           <div class="feedback__item">
             <div class="feedback__item-content">
@@ -368,7 +368,7 @@ const formatTime = (date: Date) =>
   .feedback__item-content {
     display: flex;
     flex-direction: column;
-    gap: calc(var(--lh) * 0.75);
+    gap: 1lh;
     flex-grow: 1;
   }
 
@@ -380,7 +380,7 @@ const formatTime = (date: Date) =>
   .feedback__item-author {
     display: flex;
     flex-direction: row;
-    gap: 0.25lh;
+    gap: 0.5lh;
   }
 
   .feedback__item-author-image {
@@ -388,22 +388,28 @@ const formatTime = (date: Date) =>
     height: 2lh;
     object-fit: cover;
     border-radius: var(--br);
+    box-shadow: 0 0 0 4px var(--color-border);
   }
 
   .feedback__item-author-info {
     min-width: 1px;
     flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   .feedback__item-author-name {
     font-weight: 600;
+    line-height: 0.75lh;
   }
 
   .feedback__item-author-role {
-    font-size: 14px;
+    font-size: 13px;
     opacity: 0.5;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    line-height: 0.75lh;
   }
 </style>
