@@ -67,7 +67,8 @@ const inviteUrls = getInviteUrls({
   dateEnd,
 });
 
-const dateStartParsed = dateStart.toLocaleDateString("en-GB", {
+const dateStartParsed = dateStart.toLocaleString("en-GB", {
+  timeZone: "Europe/London",
   weekday: "long",
   year: "numeric",
   month: "2-digit",
