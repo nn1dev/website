@@ -1,0 +1,10 @@
+{
+  "image": "./avatar.jpg",
+  "name": "Ana Rodrigues",
+  "role": "Front-end developer at Hactar.is",
+  "bio": "Ana works as a front-end developer at tech-for-good agency Hactar. She started coding as a teenager building fan sites, and has been working as a front-end developer for the last 13 years. Nowadays, Ana spends most of her free time experimenting on her personal blog and is particularly interested in ethics, IndieWeb, sustainability, privacy, and all things CSS.",
+  "urlWebsite": "https://ohhelloana.blog/",
+  "urlGitHub": "http://www.github.com/ohhelloana",
+  "urlBluesky": "https://bsky.app/profile/ohhelloana.blog",
+  "urlMastodon": "https://front-end.social/@anarodrigues"
+}
