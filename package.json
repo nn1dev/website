@@ -11,12 +11,12 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.9.9",
-    "@astrojs/cloudflare": "^14.0.0",
+    "@astrojs/cloudflare": "^14.0.1",
     "@astrojs/rss": "^4.0.18",
     "@astrojs/sitemap": "^3.7.3",
-    "@sentry/astro": "^10.60.0",
-    "@sentry/cloudflare": "^10.60.0",
-    "astro": "^7.0.2",
+    "@sentry/astro": "^10.61.0",
+    "@sentry/cloudflare": "^10.61.0",
+    "astro": "^7.0.3",
     "canvas-confetti": "^1.9.4",
     "sanitize-html": "^2.17.5",
     "sharp": "^0.35.2",
@@ -28,7 +28,7 @@
     "@types/sanitize-html": "^2.16.1",
     "prettier": "^3.8.4",
     "prettier-plugin-astro": "^0.14.1",
-    "wrangler": "^4.104.0"
+    "wrangler": "^4.105.0"
   },
   "allowScripts": {
     "esbuild@0.27.3": true,
