@@ -26,7 +26,7 @@
   "devDependencies": {
     "@types/canvas-confetti": "^1.9.0",
     "@types/sanitize-html": "^2.16.1",
-    "prettier": "^3.8.4",
+    "prettier": "^3.9.4",
     "prettier-plugin-astro": "^0.14.1",
     "wrangler": "^4.105.0"
   },
