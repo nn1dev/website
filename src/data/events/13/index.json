@@ -1,7 +1,7 @@
 {
   "id": 13,
   "ogImage": "./og.jpg",
-  "name": "#13: \"How we got here\" by Diana Silva and \"TBC\" by Ana Rodrigues",
+  "name": "#13: \"Scrubs to scripts\" by Diana Silva and \"TBC\" by Ana Rodrigues",
   "description": "TBC",
   "dateStart": "2026-09-24T17:00Z",
   "dateEnd": "2026-09-24T19:00Z",
@@ -20,8 +20,8 @@
     {
       "dateStart": "2026-09-24T17:30Z",
       "dateEnd": "2026-09-24T18:00Z",
-      "title": "\"How we got here\" by Diana Silva",
-      "description": ""
+      "title": "\"Scrubs to scripts\" by Diana Silva",
+      "description": "What happens when a healthcare worker accidentally falls down the coding rabbit hole? An interactive talk about changing careers at 25, learning to code, surviving imposter syndrome, and why saying \"yes\" to CS50 changed my life."
     },
     {
       "dateStart": "2026-09-24T18:00Z",
