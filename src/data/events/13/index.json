@@ -1,8 +1,8 @@
 {
   "id": 13,
   "ogImage": "./og.jpg",
-  "name": "#13: \"Scrubs to scripts\" by Diana Silva and \"TBC\" by Ana Rodrigues",
-  "description": "TBC",
+  "name": "#13: \"Scrubs to scripts\" by Diana Silva and \"I spared no expense\" by Ana Rodrigues",
+  "description": "Two Portuguese devs take the stage! Diana Silva on her journey from healthcare worker to software developer, and Ana Rodrigues on her tiny corner of the web where she celebrates passion projects built for joy, not for money.",
   "dateStart": "2026-09-24T17:00Z",
   "dateEnd": "2026-09-24T19:00Z",
   "location": "Vulcan Works, 34-38 Guildhall Rd, Northampton, NN1 1EW",
@@ -31,7 +31,8 @@
     {
       "dateStart": "2026-09-24T18:15Z",
       "dateEnd": "2026-09-24T18:45Z",
-      "title": "\"TBC\" by Ana Rodrigues"
+      "title": "\"I spared no expense\" by Ana Rodrigues",
+      "description": "A talk about the projects I built for my own tiny corner of the web that I did not need, that nobody asked for, and that I built anyway despite my bank account telling me not to. Some of them still work. All of them have a story. No expense was spared."
     }
   ],
   "speakers": ["diana-silva", "ana-rodrigues"]
