@@ -1,8 +1,9 @@
 {
   "image": "./avatar.jpg",
   "name": "Diana Silva",
-  "role": "Junior Software Engineer at WNC",
-  "bio": "TBC",
+  "role": "Software Engineer at West Northamptonshire Council",
+  "bio": "Diana is a software engineer at West Northamptonshire Council, where she builds cloud-based applications and serverless systems that support public services. After transitioning from healthcare into tech at 25, she now combines her full-time engineering role with studying Computing and IT at university. As a GirlCode ambassador, Diana is passionate about encouraging more women to pursue careers in technology and showing that there is no single path into software engineering.",
   "urlWebsite": "https://dianasill.github.io/",
-  "urlLinkedIn": "https://www.linkedin.com/in/diana-js/"
+  "urlLinkedIn": "https://www.linkedin.com/in/diana-js/",
+  "urlGitHub": "https://github.com/DianaSill"
 }
