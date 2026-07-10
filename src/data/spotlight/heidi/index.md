@@ -14,7 +14,7 @@ urlBluesky: "https://bsky.app/profile/heidi.codes"
 
 Hello! I'm Heidi, a 21-year-old cloud-ops engineer at [Dassault Systèmes](https://www.3ds.com). I was born and raised in Northampton (NN4, although I live in NN1 now). As of June 2026, I have just under 4 years of professional experience working in cloud. I have been messing with tech in some capacity for as long as I can remember.
 
-![Heidi portrait](portrait.jpg)
+![Heidi portrait](avatar.jpg)
 
 ## What first got you into tech?
 
@@ -60,4 +60,3 @@ There is a difference between [Agile](https://www.atlassian.com/agile) and [agil
 - This YouTube channel: [videogamedunkey](https://www.youtube.com/videogamedunkey)
 - This drink: Fanta Exotic
 - This song: [Dominic Fike - How Much Is Weed?](https://www.youtube.com/watch?v=4t-zLt3uYcI)
-
