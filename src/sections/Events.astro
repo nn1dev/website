@@ -130,39 +130,145 @@ const formatTime = (date: Date) =>
           ))
         }
       </div>
-      <Heading level={2} title="What people say" anchor />
+      <div class="feedback__header">
+        <Heading level={2} title="What people say" anchor />
+        <div class="feedback__nav">
+          <button
+            type="button"
+            class="feedback__nav-button"
+            data-feedback-prev
+            aria-label="Previous testimonials"
+            disabled
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 16 16"
+              fill="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M9.78 4.22a.75.75 0 0 1 0 1.06L7.06 8l2.72 2.72a.75.75 0 1 1-1.06 1.06L5.47 8.53a.75.75 0 0 1 0-1.06l3.25-3.25a.75.75 0 0 1 1.06 0Z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </button>
+          <button
+            type="button"
+            class="feedback__nav-button"
+            data-feedback-next
+            aria-label="Next testimonials"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 16 16"
+              fill="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M6.22 4.22a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06l-3.25 3.25a.75.75 0 0 1-1.06-1.06L8.94 8 6.22 5.28a.75.75 0 0 1 0-1.06Z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div class="feedback__scroller" data-at-start>
+        <div
+          class="feedback__grid"
+          tabindex="0"
+          role="region"
+          aria-label="Testimonials"
+        >
+          {
+            allFeedback
+              .sort((a, b) => (a.data.id < b.data.id ? -1 : 1))
+              .map(({ data: { image, name, role, quote } }) => (
+                <div class="feedback__item">
+                  <div class="feedback__item-content">
+                    <blockquote class="feedback__item-quote">
+                      {quote}
+                    </blockquote>
+                    <div class="feedback__item-author">
+                      <Image
+                        src={image}
+                        alt={name}
+                        width="48"
+                        height="48"
+                        loading="lazy"
+                        class="feedback__item-author-image"
+                      />
+                      <div class="feedback__item-author-info">
+                        <p class="feedback__item-author-name">{name}</p>
+                        {role ? (
+                          <p class="feedback__item-author-role">{role}</p>
+                        ) : null}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))
+          }
+        </div>
+      </div>
     </div>
   </Container>
-  <div class="feedback__grid">
-    {
-      allFeedback
-        .sort((a, b) => (a.data.id < b.data.id ? -1 : 1))
-        .map(({ data: { image, name, role, quote } }) => (
-          <div class="feedback__item">
-            <div class="feedback__item-content">
-              <blockquote class="feedback__item-quote">{quote}</blockquote>
-              <div class="feedback__item-author">
-                <Image
-                  src={image}
-                  alt={name}
-                  width="48"
-                  height="48"
-                  loading="lazy"
-                  class="feedback__item-author-image"
-                />
-                <div class="feedback__item-author-info">
-                  <p class="feedback__item-author-name">{name}</p>
-                  {role ? (
-                    <p class="feedback__item-author-role">{role}</p>
-                  ) : null}
-                </div>
-              </div>
-            </div>
-          </div>
-        ))
-    }
-  </div>
 </Section>
+
+<script>
+  const scroller = document.querySelector<HTMLElement>(".feedback__scroller");
+  const grid = document.querySelector<HTMLElement>(".feedback__grid");
+  const prevButton = document.querySelector<HTMLButtonElement>(
+    "[data-feedback-prev]",
+  );
+  const nextButton = document.querySelector<HTMLButtonElement>(
+    "[data-feedback-next]",
+  );
+
+  if (scroller && grid && prevButton && nextButton) {
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+    const scrollByCard = (direction: number) => {
+      const card = grid.firstElementChild;
+      const gap = parseFloat(getComputedStyle(grid).columnGap) || 0;
+      const step = card
+        ? card.getBoundingClientRect().width + gap
+        : grid.clientWidth;
+      grid.scrollBy({
+        left: direction * step,
+        behavior: reducedMotion.matches ? "auto" : "smooth",
+      });
+    };
+
+    prevButton.addEventListener("click", () => scrollByCard(-1));
+    nextButton.addEventListener("click", () => scrollByCard(1));
+
+    const update = () => {
+      const maxScroll = grid.scrollWidth - grid.clientWidth;
+      const atStart = grid.scrollLeft <= 1;
+      const atEnd = grid.scrollLeft >= maxScroll - 1;
+      prevButton.disabled = atStart;
+      nextButton.disabled = atEnd;
+      scroller.toggleAttribute("data-at-start", atStart);
+      scroller.toggleAttribute("data-at-end", atEnd);
+    };
+
+    let frameRequested = false;
+    const requestUpdate = () => {
+      if (frameRequested) return;
+      frameRequested = true;
+      requestAnimationFrame(() => {
+        frameRequested = false;
+        update();
+      });
+    };
+
+    grid.addEventListener("scroll", requestUpdate, { passive: true });
+    window.addEventListener("resize", requestUpdate);
+    update();
+  }
+</script>
 
 {
   eventsUpcoming.length > 0 && (
@@ -329,12 +435,96 @@ const formatTime = (date: Date) =>
     font-size: calc(var(--fz) * 0.875);
   }
 
+  .feedback__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--lh);
+  }
+
+  .feedback__nav {
+    display: flex;
+    gap: calc(var(--lh) / 4);
+  }
+
+  .feedback__nav-button {
+    width: 44px;
+    height: 44px;
+    display: grid;
+    place-items: center;
+    border: none;
+    border-radius: var(--br);
+    box-shadow: inset 0 0 0 1px var(--color-border);
+    background-color: var(--color-bg);
+    color: var(--color-fg);
+    cursor: pointer;
+
+    & svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    &:hover:not(:disabled) {
+      box-shadow: inset 0 0 0 1px var(--color-accent);
+      color: var(--color-accent);
+    }
+
+    &:focus-visible {
+      outline: 2px dotted var(--color-accent);
+      outline-offset: 2px;
+    }
+
+    &:disabled {
+      opacity: 0.4;
+      cursor: default;
+    }
+  }
+
+  .feedback__scroller {
+    position: relative;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: calc(var(--lh) * 2);
+      pointer-events: none;
+      opacity: 1;
+      transition: opacity 0.2s;
+    }
+
+    &::before {
+      left: 0;
+      background: linear-gradient(
+        to right,
+        var(--color-bg-contrast),
+        transparent
+      );
+    }
+
+    &::after {
+      right: 0;
+      background: linear-gradient(
+        to left,
+        var(--color-bg-contrast),
+        transparent
+      );
+    }
+
+    &[data-at-start]::before {
+      opacity: 0;
+    }
+
+    &[data-at-end]::after {
+      opacity: 0;
+    }
+  }
+
   .feedback__grid {
     display: grid;
     gap: var(--lh);
-    /* TODO: awful spacing hack, this whole section needs to be redone */
-    margin-block-start: calc(var(--lh) * 2);
-    padding-inline: var(--lh);
 
     grid-auto-flow: column;
     grid-auto-columns: 94%;
@@ -342,14 +532,18 @@ const formatTime = (date: Date) =>
     scroll-snap-type: x mandatory;
     scrollbar-width: none;
 
+    &:focus-visible {
+      outline: 2px dotted var(--color-accent);
+      outline-offset: -2px;
+    }
+
+    /* column widths leave a partial next card visible at the right
+       edge so the clipping reads as a carousel, not broken overflow */
     @media (min-width: 800px) {
-      grid-auto-columns: 46%;
+      grid-auto-columns: 42%;
     }
     @media (min-width: 1100px) {
-      grid-auto-columns: 31%;
-    }
-    @media (min-width: 1600px) {
-      grid-auto-columns: 21%;
+      grid-auto-columns: 29%;
     }
   }
 
