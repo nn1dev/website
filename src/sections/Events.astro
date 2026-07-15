@@ -174,13 +174,12 @@ const formatTime = (date: Date) =>
           </button>
         </div>
       </div>
-      <div class="feedback__scroller" data-at-start>
-        <div
-          class="feedback__grid"
-          tabindex="0"
-          role="region"
-          aria-label="Testimonials"
-        >
+      <div
+        class="feedback__grid"
+        tabindex="0"
+        role="region"
+        aria-label="Testimonials"
+      >
           {
             allFeedback
               .sort((a, b) => (a.data.id < b.data.id ? -1 : 1))
@@ -210,14 +209,12 @@ const formatTime = (date: Date) =>
                 </div>
               ))
           }
-        </div>
       </div>
     </div>
   </Container>
 </Section>
 
 <script>
-  const scroller = document.querySelector<HTMLElement>(".feedback__scroller");
   const grid = document.querySelector<HTMLElement>(".feedback__grid");
   const prevButton = document.querySelector<HTMLButtonElement>(
     "[data-feedback-prev]",
@@ -226,7 +223,7 @@ const formatTime = (date: Date) =>
     "[data-feedback-next]",
   );
 
-  if (scroller && grid && prevButton && nextButton) {
+  if (grid && prevButton && nextButton) {
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
     const scrollByCard = (direction: number) => {
@@ -246,26 +243,12 @@ const formatTime = (date: Date) =>
 
     const update = () => {
       const maxScroll = grid.scrollWidth - grid.clientWidth;
-      const atStart = grid.scrollLeft <= 1;
-      const atEnd = grid.scrollLeft >= maxScroll - 1;
-      prevButton.disabled = atStart;
-      nextButton.disabled = atEnd;
-      scroller.toggleAttribute("data-at-start", atStart);
-      scroller.toggleAttribute("data-at-end", atEnd);
+      prevButton.disabled = grid.scrollLeft <= 1;
+      nextButton.disabled = grid.scrollLeft >= maxScroll - 1;
     };
 
-    let frameRequested = false;
-    const requestUpdate = () => {
-      if (frameRequested) return;
-      frameRequested = true;
-      requestAnimationFrame(() => {
-        frameRequested = false;
-        update();
-      });
-    };
-
-    grid.addEventListener("scroll", requestUpdate, { passive: true });
-    window.addEventListener("resize", requestUpdate);
+    grid.addEventListener("scroll", update, { passive: true });
+    window.addEventListener("resize", update);
     update();
   }
 </script>
@@ -448,8 +431,11 @@ const formatTime = (date: Date) =>
   }
 
   .feedback__nav-button {
-    width: 44px;
-    height: 44px;
+    /* inherit the body font so the lh unit resolves to var(--lh),
+       not the UA button line-height */
+    font: inherit;
+    width: 2lh;
+    height: 2lh;
     display: grid;
     place-items: center;
     border: none;
@@ -460,8 +446,8 @@ const formatTime = (date: Date) =>
     cursor: pointer;
 
     & svg {
-      width: 20px;
-      height: 20px;
+      width: 1lh;
+      height: 1lh;
     }
 
     &:hover:not(:disabled) {
@@ -477,48 +463,6 @@ const formatTime = (date: Date) =>
     &:disabled {
       opacity: 0.4;
       cursor: default;
-    }
-  }
-
-  .feedback__scroller {
-    position: relative;
-
-    &::before,
-    &::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      width: calc(var(--lh) * 2);
-      pointer-events: none;
-      opacity: 1;
-      transition: opacity 0.2s;
-    }
-
-    &::before {
-      left: 0;
-      background: linear-gradient(
-        to right,
-        var(--color-bg-contrast),
-        transparent
-      );
-    }
-
-    &::after {
-      right: 0;
-      background: linear-gradient(
-        to left,
-        var(--color-bg-contrast),
-        transparent
-      );
-    }
-
-    &[data-at-start]::before {
-      opacity: 0;
-    }
-
-    &[data-at-end]::after {
-      opacity: 0;
     }
   }
 
@@ -540,10 +484,10 @@ const formatTime = (date: Date) =>
     /* column widths leave a partial next card visible at the right
        edge so the clipping reads as a carousel, not broken overflow */
     @media (min-width: 800px) {
-      grid-auto-columns: 42%;
+      grid-auto-columns: 41%;
     }
     @media (min-width: 1100px) {
-      grid-auto-columns: 29%;
+      grid-auto-columns: 28%;
     }
   }
 
