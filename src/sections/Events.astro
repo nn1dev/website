@@ -174,44 +174,37 @@ const formatTime = (date: Date) =>
           </button>
         </div>
       </div>
-      <div
-        class="feedback__grid"
-        tabindex="0"
-        role="region"
-        aria-label="Testimonials"
-      >
-          {
-            allFeedback
-              .sort((a, b) => (a.data.id < b.data.id ? -1 : 1))
-              .map(({ data: { image, name, role, quote } }) => (
-                <div class="feedback__item">
-                  <div class="feedback__item-content">
-                    <blockquote class="feedback__item-quote">
-                      {quote}
-                    </blockquote>
-                    <div class="feedback__item-author">
-                      <Image
-                        src={image}
-                        alt={name}
-                        width="48"
-                        height="48"
-                        loading="lazy"
-                        class="feedback__item-author-image"
-                      />
-                      <div class="feedback__item-author-info">
-                        <p class="feedback__item-author-name">{name}</p>
-                        {role ? (
-                          <p class="feedback__item-author-role">{role}</p>
-                        ) : null}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              ))
-          }
-      </div>
     </div>
   </Container>
+  <div class="feedback__grid">
+    {
+      allFeedback
+        .sort((a, b) => (a.data.id < b.data.id ? -1 : 1))
+        .map(({ data: { image, name, role, quote } }) => (
+          <div class="feedback__item">
+            <div class="feedback__item-content">
+              <blockquote class="feedback__item-quote">{quote}</blockquote>
+              <div class="feedback__item-author">
+                <Image
+                  src={image}
+                  alt={name}
+                  width="48"
+                  height="48"
+                  loading="lazy"
+                  class="feedback__item-author-image"
+                />
+                <div class="feedback__item-author-info">
+                  <p class="feedback__item-author-name">{name}</p>
+                  {role ? (
+                    <p class="feedback__item-author-role">{role}</p>
+                  ) : null}
+                </div>
+              </div>
+            </div>
+          </div>
+        ))
+    }
+  </div>
 </Section>
 
 <script>
@@ -469,6 +462,9 @@ const formatTime = (date: Date) =>
   .feedback__grid {
     display: grid;
     gap: var(--lh);
+    /* TODO: awful spacing hack, this whole section needs to be redone */
+    margin-block-start: calc(var(--lh) * 2);
+    padding-inline: var(--lh);
 
     grid-auto-flow: column;
     grid-auto-columns: 94%;
@@ -476,18 +472,14 @@ const formatTime = (date: Date) =>
     scroll-snap-type: x mandatory;
     scrollbar-width: none;
 
-    &:focus-visible {
-      outline: 2px dotted var(--color-accent);
-      outline-offset: -2px;
-    }
-
-    /* column widths leave a partial next card visible at the right
-       edge so the clipping reads as a carousel, not broken overflow */
     @media (min-width: 800px) {
-      grid-auto-columns: 41%;
+      grid-auto-columns: 46%;
     }
     @media (min-width: 1100px) {
-      grid-auto-columns: 28%;
+      grid-auto-columns: 31%;
+    }
+    @media (min-width: 1600px) {
+      grid-auto-columns: 21%;
     }
   }
 
