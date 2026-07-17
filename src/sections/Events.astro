@@ -130,7 +130,50 @@ const formatTime = (date: Date) =>
           ))
         }
       </div>
-      <Heading level={2} title="What people say" anchor />
+      <div class="feedback__header">
+        <Heading level={2} title="What people say" anchor />
+        <div class="feedback__nav">
+          <button
+            type="button"
+            class="feedback__nav-button"
+            data-feedback-prev
+            aria-label="Previous testimonials"
+            disabled
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 16 16"
+              fill="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M9.78 4.22a.75.75 0 0 1 0 1.06L7.06 8l2.72 2.72a.75.75 0 1 1-1.06 1.06L5.47 8.53a.75.75 0 0 1 0-1.06l3.25-3.25a.75.75 0 0 1 1.06 0Z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </button>
+          <button
+            type="button"
+            class="feedback__nav-button"
+            data-feedback-next
+            aria-label="Next testimonials"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 16 16"
+              fill="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M6.22 4.22a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06l-3.25 3.25a.75.75 0 0 1-1.06-1.06L8.94 8 6.22 5.28a.75.75 0 0 1 0-1.06Z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
     </div>
   </Container>
   <div class="feedback__grid">
@@ -163,6 +206,45 @@ const formatTime = (date: Date) =>
     }
   </div>
 </Section>
+
+<script>
+  const grid = document.querySelector<HTMLElement>(".feedback__grid");
+  const prevButton = document.querySelector<HTMLButtonElement>(
+    "[data-feedback-prev]",
+  );
+  const nextButton = document.querySelector<HTMLButtonElement>(
+    "[data-feedback-next]",
+  );
+
+  if (grid && prevButton && nextButton) {
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+    const scrollByCard = (direction: number) => {
+      const card = grid.firstElementChild;
+      const gap = parseFloat(getComputedStyle(grid).columnGap) || 0;
+      const step = card
+        ? card.getBoundingClientRect().width + gap
+        : grid.clientWidth;
+      grid.scrollBy({
+        left: direction * step,
+        behavior: reducedMotion.matches ? "auto" : "smooth",
+      });
+    };
+
+    prevButton.addEventListener("click", () => scrollByCard(-1));
+    nextButton.addEventListener("click", () => scrollByCard(1));
+
+    const update = () => {
+      const maxScroll = grid.scrollWidth - grid.clientWidth;
+      prevButton.disabled = grid.scrollLeft <= 1;
+      nextButton.disabled = grid.scrollLeft >= maxScroll - 1;
+    };
+
+    grid.addEventListener("scroll", update, { passive: true });
+    window.addEventListener("resize", update);
+    update();
+  }
+</script>
 
 {
   eventsUpcoming.length > 0 && (
@@ -327,6 +409,54 @@ const formatTime = (date: Date) =>
     color: var(--color-accent);
     text-decoration: underline;
     font-size: calc(var(--fz) * 0.875);
+  }
+
+  .feedback__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--lh);
+  }
+
+  .feedback__nav {
+    display: flex;
+    gap: calc(var(--lh) / 4);
+  }
+
+  .feedback__nav-button {
+    /* inherit the body font so the lh unit resolves to var(--lh),
+       not the UA button line-height */
+    font: inherit;
+    width: 2lh;
+    height: 2lh;
+    display: grid;
+    place-items: center;
+    border: none;
+    border-radius: var(--br);
+    box-shadow: inset 0 0 0 1px var(--color-border);
+    background-color: var(--color-bg);
+    color: var(--color-fg);
+    cursor: pointer;
+
+    & svg {
+      width: 1lh;
+      height: 1lh;
+    }
+
+    &:hover:not(:disabled) {
+      box-shadow: inset 0 0 0 1px var(--color-accent);
+      color: var(--color-accent);
+    }
+
+    &:focus-visible {
+      outline: 2px dotted var(--color-accent);
+      outline-offset: 2px;
+    }
+
+    &:disabled {
+      opacity: 0.4;
+      cursor: default;
+    }
   }
 
   .feedback__grid {
