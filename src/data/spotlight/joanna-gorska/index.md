@@ -11,6 +11,8 @@ urlLinkedIn: "https://www.linkedin.com/in/joanna-g-759a40210/"
 
 I'm the senior code wizard at Oxygen Finance, caretaker of BidStats - a magical land where mere mortals hunt for tenders in the public or private sector. (No dragons, but plenty of spreadsheets.)
 
+![Joanna's portrait](portrait.jpg)
+
 ## What first got you into tech?
 
 Once upon a time, I was a care worker - saving the day, one cup of tea at a time. Then, along came COVID, and suddenly my job was both hazardous and still paid in peanuts. Tech started looking mighty attractive!
