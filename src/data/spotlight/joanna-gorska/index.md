@@ -5,6 +5,7 @@ date: "2026-07-24"
 image: "avatar.jpg"
 ogImage: "og.jpg"
 urlLinkedIn: "https://www.linkedin.com/in/joanna-g-759a40210/"
+urlGitHub: "https://github.com/JoGorska"
 ---
 
 ## Who are you and what do you do?
