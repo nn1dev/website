@@ -2,7 +2,7 @@
   "id": 14,
   "draft": true,
   "ogImage": "./og.jpg",
-  "name": "#14: \"Still Curious: Open Source and AI\" by Lotte Pitcher, \"Talk 2\" by TCB and \"Talk 3\" by Rehan Butt",
+  "name": "#14: \"Still Curious: Open Source and AI\" by Lotte Pitcher, \"Solving for Y: The XY Problem in Practice\" by Mitchell Nortje and Paul Dolby and \"Talk 3\" by Rehan Butt",
   "description": "TBC",
   "dateStart": "2026-11-26T18:00Z",
   "dateEnd": "2026-11-26T21:00Z",
@@ -27,8 +27,8 @@
     {
       "dateStart": "2026-11-26T19:15Z",
       "dateEnd": "2026-11-26T20:00Z",
-      "title": "\"Talk 2\" by TBC",
-      "description": ""
+      "title": "\"Solving for Y: The XY Problem in Practice\" by Mitchell Nortje and Paul Dolby",
+      "description": "A developer asks how to disable the browser's back button. If you just answer that question, you'll spend an afternoon down a rabbit hole, because browsers don't really let you. But the developer didn't actually want to break the back button. They wanted to stop users hitting back after submitting a form and accidentally submitting it twice. That's the XY problem: getting so attached to a proposed solution (Y) that the real problem (X) never gets said out loud, sometimes not even by the person asking. Paul and Mitch showcase some examples, talk through some of the other ways it turns up at work, and leave you with a few simple ways to catch it before it costs you a sprint, a client relationship, or an evening spent debugging the wrong thing."
     },
     {
       "dateStart": "2026-11-26T20:00Z",
@@ -41,5 +41,5 @@
       "title": "\"Talk 3\" by Rehan Butt"
     }
   ],
-  "speakers": ["lotte-pitcher", "rehan-butt"]
+  "speakers": ["lotte-pitcher", "mitchell-nortje", "paul-dolby", "rehan-butt"]
 }
