@@ -69,6 +69,8 @@ At home, I have a much more powerful desktop workstation. I mainly use it for ga
 - Corsair RM1000X 1000W PSU
 - Fractal Design Celsius S36 AIO cooler
 
+![Andrei's setup](setup.jpg)
+
 ## What's the last piece of work you feel proud of?
 
 Probably my final-year university project, AILMS — an AI-Enhanced Multi-Role Logistics Management System.
