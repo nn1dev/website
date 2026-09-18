@@ -1,16 +1,18 @@
 ---
-draft: true
 name: "Andrei Kotlyarenko"
 role: "Software Engineer"
 date: "2026-09-18"
 image: "./portrait.jpg"
 ogImage: "./og.jpg"
 urlLinkedIn: "https://www.linkedin.com/in/andrei-kotlyarenko-b22932217/"
+urlGitHub: "https://github.com/Andrelushka"
 ---
 
 ## Who are you and what do you do?
 
 I'm Andrei, a Software Engineering graduate based in Northampton. Before moving into software, I also studied Economics, specialising in Finance and Banking, so my background is a mix of technology, business and finance.
+
+![Andrei's portrait](portrait.jpg)
 
 At the moment, I'm trying to make the jump into my first proper software engineering role. My background is a bit unusual because, alongside university, I've also been working as an HGV Class 1 driver.
 
@@ -67,6 +69,8 @@ At home, I have a much more powerful desktop workstation. I mainly use it for ga
 - Corsair RM1000X 1000W PSU
 - Fractal Design Celsius S36 AIO cooler
 
+![Andrei's setup](setup.jpg)
+
 ## What's the last piece of work you feel proud of?
 
 Probably my final-year university project, AILMS — an AI-Enhanced Multi-Role Logistics Management System.
@@ -88,3 +92,7 @@ I also really like the way engineers think — taking a big problem, breaking it
 Another thing I find fascinating is how hardware and software can work together to create something completely new. Technology gives people so many different ways to build, create and express themselves through their work.
 
 ## Share with others something worth checking out. Not necessarily tech related. Shameless plugs welcomed.
+
+Yuka - mobile app that lets you scan food and cosmetic barcodes to quickly check how healthy or safe a product is.
+
+MuscleWiki - an app that shows exercises for specific muscles. You select a body part and it gives you suitable exercises with demonstrations.
