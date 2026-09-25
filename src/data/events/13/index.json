@@ -35,5 +35,39 @@
       "description": "A talk about the projects I built for my own tiny corner of the web that I did not need, that nobody asked for, and that I built anyway despite my bank account telling me not to. Some of them still work. All of them have a story. No expense was spared."
     }
   ],
-  "speakers": ["diana-silva", "ana-rodrigues"]
+  "speakers": ["diana-silva", "ana-rodrigues"],
+  "images": [
+    {
+      "src": "./gallery/1.jpg",
+      "caption": "Diana Silva presenting at the NN1 Dev Club #13"
+    },
+    {
+      "src": "./gallery/2.jpg",
+      "caption": "Diana Silva presenting at the NN1 Dev Club #13"
+    },
+    {
+      "src": "./gallery/3.jpg",
+      "caption": "Ana Rodriguez presenting at the NN1 Dev Club #13"
+    },
+    {
+      "src": "./gallery/4.jpg",
+      "caption": "A look at the video setup that is in the process of capturing Diana's talk"
+    },
+    {
+      "src": "./gallery/5.jpg",
+      "caption": "Ana Rodriguez presenting at the NN1 Dev Club #13"
+    },
+    {
+      "src": "./gallery/6.jpg",
+      "caption": "Ana Rodriguez presenting at the NN1 Dev Club #13"
+    },
+    {
+      "src": "./gallery/7.jpg",
+      "caption": "Explorable Games crew at the NN1 Dev Club #13"
+    },
+    {
+      "src": "./gallery/8.jpg",
+      "caption": "One of the slides from Ana Rodriguez's talk at the NN1 Dev Club #13"
+    }
+  ]
 }
