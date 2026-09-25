@@ -1,8 +1,8 @@
 {
   "id": 14,
   "ogImage": "./og.jpg",
-  "name": "#14: \"Still Curious: Open Source and AI\" by Lotte Pitcher, \"Solving for Y: The XY Problem in Practice\" by Mitchell Nortje and Paul Dolby and \"Talk 3\" by Rehan Butt",
-  "description": "TBC",
+  "name": "#14: \"Still Curious: Open Source and AI\" by Lotte Pitcher, \"Solving for Y: The XY Problem in Practice\" by Mitchell Nortje and Paul Dolby and \"Don't lose your head\" by Rehan Butt",
+  "description": "Join Lotte Pitcher from Umbraco HQ and the Spinbox team for an evening of insight, discussion and networking. The event explores modern web development, CMS architecture, digital platforms, AI and open-source software. Through real-world talks and practical examples, speakers will challenge common assumptions, share lessons learned from delivering digital projects, and explore the future of technology in an AI-driven world. Proudly sponsored by Umbraco.",
   "dateStart": "2026-11-26T18:00Z",
   "dateEnd": "2026-11-26T21:00Z",
   "location": "Vulcan Works, 34-38 Guildhall Rd, Northampton, NN1 1EW",
@@ -37,7 +37,8 @@
     {
       "dateStart": "2026-11-26T20:30Z",
       "dateEnd": "2026-11-26T21:00Z",
-      "title": "\"Talk 3\" by Rehan Butt"
+      "title": "\"Don't lose your head\" by Rehan Butt",
+      "description": "We all believed life with head is better than life without head, however CMS vendors have been encouraging and promoting Headless CMS for many years now. This talk walks through the honest trade-offs between headless and traditional monolithic CMS architecture, using Umbraco as the common reference point."
     }
   ],
   "speakers": ["lotte-pitcher", "mitchell-nortje", "paul-dolby", "rehan-butt"]
