@@ -34,101 +34,102 @@ const formatTime = (date: Date) =>
 <Section style="contrast">
   <Container>
     <div class="events">
-      <Heading
-        level={2}
-        title={eventsUpcoming.length > 1 ? "Upcoming events" : "Upcoming event"}
-        anchor
-      />
-      <div class="events__grid">
-        {
-          eventsUpcoming.map(
-            ({
-              id,
-              data: { id: eventId, name, description, dateStart, location },
-            }) => (
-              <a
-                href={`/events/${id}`}
-                class="events__item events__item--upcoming"
-                data-id={eventId}
-              >
-                <div class="events__item-content">
-                  <span class="events__item-label">Upcoming event</span>
-                  <h3 class="events__item-name">{name}</h3>
-                  <p class="events__item-description">{description}</p>
-                  <ul class="events__item-list">
-                    <li class="events__item-list-item">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 16 16"
-                        fill="currentColor"
-                        class="events__item-icon"
-                        aria-hidden="true"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          d="M4 1.75a.75.75 0 0 1 1.5 0V3h5V1.75a.75.75 0 0 1 1.5 0V3a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2V1.75ZM4.5 6a1 1 0 0 0-1 1v4.5a1 1 0 0 0 1 1h7a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1h-7Z"
-                          clip-rule="evenodd"
-                        />
-                      </svg>
-                      <time datetime={dateStart.toISOString()}>
-                        {formatTime(dateStart)}
-                      </time>
-                    </li>
-                    <li class="events__item-list-item">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 16 16"
-                        fill="currentColor"
-                        class="events__item-icon"
-                        aria-hidden="true"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          d="m7.539 14.841.003.003.002.002a.755.755 0 0 0 .912 0l.002-.002.003-.003.012-.009a5.57 5.57 0 0 0 .19-.153 15.588 15.588 0 0 0 2.046-2.082c1.101-1.362 2.291-3.342 2.291-5.597A5 5 0 0 0 3 7c0 2.255 1.19 4.235 2.292 5.597a15.591 15.591 0 0 0 2.046 2.082 8.916 8.916 0 0 0 .189.153l.012.01ZM8 8.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z"
-                          clip-rule="evenodd"
-                        />
-                      </svg>
-                      {location}
-                    </li>
-                    <li class="events__item-list-item">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 16 16"
-                        fill="currentColor"
-                        class="events__item-icon"
-                        aria-hidden="true"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          d="M15 8A7 7 0 1 1 1 8a7 7 0 0 1 14 0ZM7.94 4.94c-.294.293-.44.675-.44 1.06v1.25h1.25a.75.75 0 1 1 0 1.5H7.5v1c0 .263-.045.516-.128.75h3.878a.75.75 0 0 1 0 1.5h-6.5a.75.75 0 0 1 0-1.5h.5A.75.75 0 0 0 6 9.75v-1H4.75a.75.75 0 0 1 0-1.5H6V6a3 3 0 0 1 5.121-2.121.75.75 0 1 1-1.06 1.06 1.5 1.5 0 0 0-2.121 0Z"
-                          clip-rule="evenodd"
-                        />
-                      </svg>
-                      FREE
-                    </li>
-                  </ul>
-                  <p class="events__more" aria-hidden="true">
-                    Read more »
-                  </p>
-                </div>
-              </a>
-            ),
-          )
-        }
-      </div>
+      {eventsUpcoming.length ? (
+        <>
+          <Heading
+            level={2}
+            title={
+              eventsUpcoming.length > 1 ? "Upcoming events" : "Upcoming event"
+            }
+            anchor
+          />
+          <div class="events__grid">
+            {eventsUpcoming.map(
+              ({
+                id,
+                data: { id: eventId, name, description, dateStart, location },
+              }) => (
+                <a
+                  href={`/events/${id}`}
+                  class="events__item events__item--upcoming"
+                  data-id={eventId}
+                >
+                  <div class="events__item-content">
+                    <span class="events__item-label">Upcoming event</span>
+                    <h3 class="events__item-name">{name}</h3>
+                    <p class="events__item-description">{description}</p>
+                    <ul class="events__item-list">
+                      <li class="events__item-list-item">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 16 16"
+                          fill="currentColor"
+                          class="events__item-icon"
+                          aria-hidden="true"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M4 1.75a.75.75 0 0 1 1.5 0V3h5V1.75a.75.75 0 0 1 1.5 0V3a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2V1.75ZM4.5 6a1 1 0 0 0-1 1v4.5a1 1 0 0 0 1 1h7a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1h-7Z"
+                            clip-rule="evenodd"
+                          />
+                        </svg>
+                        <time datetime={dateStart.toISOString()}>
+                          {formatTime(dateStart)}
+                        </time>
+                      </li>
+                      <li class="events__item-list-item">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 16 16"
+                          fill="currentColor"
+                          class="events__item-icon"
+                          aria-hidden="true"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="m7.539 14.841.003.003.002.002a.755.755 0 0 0 .912 0l.002-.002.003-.003.012-.009a5.57 5.57 0 0 0 .19-.153 15.588 15.588 0 0 0 2.046-2.082c1.101-1.362 2.291-3.342 2.291-5.597A5 5 0 0 0 3 7c0 2.255 1.19 4.235 2.292 5.597a15.591 15.591 0 0 0 2.046 2.082 8.916 8.916 0 0 0 .189.153l.012.01ZM8 8.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z"
+                            clip-rule="evenodd"
+                          />
+                        </svg>
+                        {location}
+                      </li>
+                      <li class="events__item-list-item">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 16 16"
+                          fill="currentColor"
+                          class="events__item-icon"
+                          aria-hidden="true"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M15 8A7 7 0 1 1 1 8a7 7 0 0 1 14 0ZM7.94 4.94c-.294.293-.44.675-.44 1.06v1.25h1.25a.75.75 0 1 1 0 1.5H7.5v1c0 .263-.045.516-.128.75h3.878a.75.75 0 0 1 0 1.5h-6.5a.75.75 0 0 1 0-1.5h.5A.75.75 0 0 0 6 9.75v-1H4.75a.75.75 0 0 1 0-1.5H6V6a3 3 0 0 1 5.121-2.121.75.75 0 1 1-1.06 1.06 1.5 1.5 0 0 0-2.121 0Z"
+                            clip-rule="evenodd"
+                          />
+                        </svg>
+                        FREE
+                      </li>
+                    </ul>
+                    <p class="events__more" aria-hidden="true">
+                      Read more »
+                    </p>
+                  </div>
+                </a>
+              ),
+            )}
+          </div>
+        </>
+      ) : null}
+
       <Heading level={3} title="Past events" anchor />
       <div class="events__grid">
-        {
-          eventsPast.map(({ id, data: { id: eventId, name } }) => (
-            <a href={`/events/${id}`} class="events__item" data-id={eventId}>
-              <div class="events__item-content">
-                <h3 class="events__item-name events__item-name--past">
-                  {name}
-                </h3>
-              </div>
-            </a>
-          ))
-        }
+        {eventsPast.map(({ id, data: { id: eventId, name } }) => (
+          <a href={`/events/${id}`} class="events__item" data-id={eventId}>
+            <div class="events__item-content">
+              <h3 class="events__item-name events__item-name--past">{name}</h3>
+            </div>
+          </a>
+        ))}
       </div>
       <div class="feedback__header">
         <Heading level={2} title="What people say" anchor />
@@ -177,33 +178,29 @@ const formatTime = (date: Date) =>
     </div>
   </Container>
   <div class="feedback__grid">
-    {
-      allFeedback
-        .sort((a, b) => (a.data.id < b.data.id ? -1 : 1))
-        .map(({ data: { image, name, role, quote } }) => (
-          <div class="feedback__item">
-            <div class="feedback__item-content">
-              <blockquote class="feedback__item-quote">{quote}</blockquote>
-              <div class="feedback__item-author">
-                <Image
-                  src={image}
-                  alt={name}
-                  width="48"
-                  height="48"
-                  loading="lazy"
-                  class="feedback__item-author-image"
-                />
-                <div class="feedback__item-author-info">
-                  <p class="feedback__item-author-name">{name}</p>
-                  {role ? (
-                    <p class="feedback__item-author-role">{role}</p>
-                  ) : null}
-                </div>
+    {allFeedback
+      .sort((a, b) => (a.data.id < b.data.id ? -1 : 1))
+      .map(({ data: { image, name, role, quote } }) => (
+        <div class="feedback__item">
+          <div class="feedback__item-content">
+            <blockquote class="feedback__item-quote">{quote}</blockquote>
+            <div class="feedback__item-author">
+              <Image
+                src={image}
+                alt={name}
+                width="48"
+                height="48"
+                loading="lazy"
+                class="feedback__item-author-image"
+              />
+              <div class="feedback__item-author-info">
+                <p class="feedback__item-author-name">{name}</p>
+                {role ? <p class="feedback__item-author-role">{role}</p> : null}
               </div>
             </div>
           </div>
-        ))
-    }
+        </div>
+      ))}
   </div>
 </Section>
 
@@ -246,20 +243,18 @@ const formatTime = (date: Date) =>
   }
 </script>
 
-{
-  eventsUpcoming.length > 0 && (
-    <script
-      type="speculationrules"
-      set:html={JSON.stringify({
-        prerender: eventsUpcoming.map((event) => ({
-          where: { href_matches: `/events/${event.id}` },
-          eagerness: "moderate",
-        })),
-      })}
-      is:inline
-    />
-  )
-}
+{eventsUpcoming.length > 0 && (
+  <script
+    type="speculationrules"
+    set:html={JSON.stringify({
+      prerender: eventsUpcoming.map((event) => ({
+        where: { href_matches: `/events/${event.id}` },
+        eagerness: "moderate",
+      })),
+    })}
+    is:inline
+  ></script>
+)}
 
 <style>
   .events {
@@ -425,7 +420,7 @@ const formatTime = (date: Date) =>
 
   .feedback__nav-button {
     /* inherit the body font so the lh unit resolves to var(--lh),
-       not the UA button line-height */
+         not the UA button line-height */
     font: inherit;
     width: 2lh;
     height: 2lh;
