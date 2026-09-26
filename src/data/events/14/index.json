@@ -19,24 +19,24 @@
     },
     {
       "dateStart": "2026-11-26T18:30Z",
-      "dateEnd": "2026-11-26T19:15Z",
+      "dateEnd": "2026-11-26T19:10Z",
       "title": "\"Still Curious: Open Source and AI\" by Lotte Pitcher",
       "description": "Open source has always depended on curious people building what didn’t exist, sharing it openly, and helping it grow through community. But if AI increasingly nudges us toward reusing the same few projects, what happens to the other ones, the newer ideas, and the people doing the work behind them? This talk explores how AI is changing the way we choose our dependencies, how that's reshaping the wider ecosystem, and what it means for the communities (and the economics) keeping open source alive. My hope is you'll leave seeing why we humans matter more than ever in keeping software creative, sustainable, and capable of innovation."
     },
     {
-      "dateStart": "2026-11-26T19:15Z",
-      "dateEnd": "2026-11-26T20:00Z",
+      "dateStart": "2026-11-26T19:10Z",
+      "dateEnd": "2026-11-26T19:30Z",
+      "title": "Break"
+    },
+    {
+      "dateStart": "2026-11-26T19:30Z",
+      "dateEnd": "2026-11-26T20:10Z",
       "title": "\"Solving for Y: The XY Problem in Practice\" by Mitchell Nortje and Paul Dolby",
       "description": "A developer asks how to disable the browser's back button. If you just answer that question, you'll spend an afternoon down a rabbit hole, because browsers don't really let you. But the developer didn't actually want to break the back button. They wanted to stop users hitting back after submitting a form and accidentally submitting it twice. That's the XY problem: getting so attached to a proposed solution (Y) that the real problem (X) never gets said out loud, sometimes not even by the person asking. Paul and Mitch showcase some examples, talk through some of the other ways it turns up at work, and leave you with a few simple ways to catch it before it costs you a sprint, a client relationship, or an evening spent debugging the wrong thing."
     },
     {
-      "dateStart": "2026-11-26T20:00Z",
+      "dateStart": "2026-11-26T20:10Z",
       "dateEnd": "2026-11-26T20:30Z",
-      "title": "Break"
-    },
-    {
-      "dateStart": "2026-11-26T20:30Z",
-      "dateEnd": "2026-11-26T21:00Z",
       "title": "\"Don't lose your head\" by Rehan Butt",
       "description": "We all believed life with head is better than life without head, however CMS vendors have been encouraging and promoting Headless CMS for many years now. This talk walks through the honest trade-offs between headless and traditional monolithic CMS architecture, using Umbraco as the common reference point."
     }
