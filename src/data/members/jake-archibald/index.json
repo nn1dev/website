@@ -1,0 +1,13 @@
+{
+  "image": "./avatar.jpg",
+  "name": "Jake Archibald",
+  "role": "Developer of sorts at Firefox",
+  "bio": "Jake Archibald is a developer of sorts working at Mozilla on web standards and developer relations.",
+  "urlWebsite": "https://jakearchibald.com/",
+  "urlGitHub": "https://github.com/jakearchibald/",
+  "urlLinkedIn": "https://www.linkedin.com/in/jake-archibald/",
+  "urlMastodon": "https://mastodon.social/@jaffathecake",
+  "urlBluesky": "https://bsky.app/profile/jakearchibald.com",
+  "urlTwitter": "https://twitter.com/jaffathecake",
+  "urlThreads": "https://www.threads.com/@jaffathecake"
+}

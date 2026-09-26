@@ -74,6 +74,7 @@ const member = defineCollection({
         urlTwitter: z.url().optional(),
         urlHuggingFace: z.url().optional(),
         urlYouTube: z.url().optional(),
+        urlThreads: z.url().optional(),
         urlNuGet: z.url().optional(),
         urlStackOverflow: z.url().optional(),
       })

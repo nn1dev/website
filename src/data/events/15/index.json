@@ -2,7 +2,7 @@
   "id": 15,
   "ogImage": "./og.jpg",
   "draft": true,
-  "name": "#15: \"TBC\" by Ainsley Clark and \"TBC\" by TBC",
+  "name": "#15: \"TBC\" by Ainsley Clark and \"TBC\" by Jake Archibald",
   "description": "TBC",
   "dateStart": "2027-01-28T18:00Z",
   "dateEnd": "2027-01-28T20:00Z",
@@ -32,8 +32,8 @@
     {
       "dateStart": "2027-01-28T19:15Z",
       "dateEnd": "2027-01-28T19:45Z",
-      "title": "\"TBC\" by TBC"
+      "title": "\"TBC\" by Jake Archibald"
     }
   ],
-  "speakers": ["ainsley-clark"]
+  "speakers": ["ainsley-clark", "jake-archibald"]
 }
