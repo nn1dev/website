@@ -69,5 +69,17 @@
       "src": "./gallery/8.jpg",
       "caption": "One of the slides from Ana Rodriguez's talk at the NN1 Dev Club #13"
     }
+  ],
+  "videos": [
+    {
+      "youtubeId": "0AiBT4KMthQ",
+      "poster": "./posters/diana.jpg",
+      "caption": "\"Scrubs to scripts\" by Diana Silva"
+    },
+    {
+      "youtubeId": "crSAen7CabY",
+      "poster": "./posters/ana.jpg",
+      "caption": "\"I spared no expense\" by Ana Rodrigues"
+    }
   ]
 }
