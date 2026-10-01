@@ -15,6 +15,7 @@ const events = fs
 // https://astro.build/config
 export default defineConfig({
   site: "https://nn1.dev",
+  session: false,
   adapter: cloudflare({
     imageService: "compile",
     prerenderEnvironment: "node",
