@@ -11,6 +11,8 @@ urlLinkedIn: "https://www.linkedin.com/in/kiranp99/"
 
 Hi I'm Kiran. I'm a Principal Product Manager. Over the last 7 years I've worked for a consultancy, Transform UK, where I've led product teams to improve and build great experiences for users across lots of different industries such as central Government, education, justice, utilities and media.
 
+![Kiran Patel's portrait](portrait.jpg)
+
 ## What first got you into tech?
 
 As with a lot of people - by accident. I started off as an Aerospace Engineer working in Defence....and then went into Management Consulting where I wore many hats such as delivery management, change management, business analysis before moving into product....and I've been here ever since.
