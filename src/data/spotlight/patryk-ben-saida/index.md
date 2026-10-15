@@ -1,5 +1,4 @@
 ---
-draft: true
 name: "Patryk Ben Saida"
 role: "Penetration Tester / Cybersecurity Graduate"
 date: "2026-10-16"
