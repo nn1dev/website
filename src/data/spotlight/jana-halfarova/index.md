@@ -36,7 +36,6 @@ Nothing spectacular, I'm afraid! I don't buy new tech unless something is broken
 - Logitech Lift vertical mouse
 - Apple Magic Keyboard
 
-
 ![Jana Halfarova's setup](setup.jpg)
 
 ### Software
@@ -47,7 +46,7 @@ Nothing spectacular, I'm afraid! I don't buy new tech unless something is broken
 
 ## What's the last piece of work you feel proud of?
 
-Probably my first mobile app project.  A fintech product focused on family wealth, helping parents and relatives invest in a child's future. It's always rewarding to work on something with a genuinely positive outcome that people enjoy using. Despite being new to app design, I'm proud of how it turned out, even with the complexity of the flows involved.
+Probably my first mobile app project. A fintech product focused on family wealth, helping parents and relatives invest in a child's future. It's always rewarding to work on something with a genuinely positive outcome that people enjoy using. Despite being new to app design, I'm proud of how it turned out, even with the complexity of the flows involved.
 
 ## What's one thing about your profession you wish more people knew?
 
@@ -55,5 +54,5 @@ Most of our work is invisible. People see the final UI screens, but getting ther
 
 ## Share with others something worth checking out. Not necessarily tech related. Shameless plugs welcomed.
 
-- For any fitness enthusiasts tired of programming their own workouts,  I really love [the Ladder app](https://www.joinladder.com/)
+- For any fitness enthusiasts tired of programming their own workouts, I really love [the Ladder app](https://www.joinladder.com/)
 - [Palia](https://palia.com/) - Free to play, open-world MMO game that I’ve been enjoying for a couple of years

@@ -1,13 +1,10 @@
 import rss from "@astrojs/rss";
 import type { APIRoute } from "astro";
 import { getCollection } from "astro:content";
-import sanitizeHtml from 'sanitize-html';
+import sanitizeHtml from "sanitize-html";
 
 export const GET: APIRoute = async (context) => {
-  const spotlights = await getCollection(
-    "spotlight",
-    ({ data }) => !data.draft,
-  );
+  const spotlights = await getCollection("spotlight", ({ data }) => !data.draft);
 
   // Newest to oldest
   spotlights.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
@@ -22,7 +19,7 @@ export const GET: APIRoute = async (context) => {
       pubDate: new Date(post.data.date),
       link: `/spotlight/${post.id}`,
       ...(post.rendered?.html && {
-        description: sanitizeHtml(post.rendered.html)
+        description: sanitizeHtml(post.rendered.html),
       }),
       guid: `/spotlight/${post.id}`,
     })),

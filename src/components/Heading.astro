@@ -9,7 +9,7 @@ const { title, level, anchor } = Astro.props;
 const id = title
   .toLowerCase()
   .replaceAll(" ", "-")
-  .replace(/[^A-Za-z0-9\-]/g, "");
+  .replace(/[^A-Za-z0-9-]/g, "");
 ---
 
 {

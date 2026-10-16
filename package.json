@@ -1,13 +1,18 @@
 {
   "name": "nn1dev-website",
-  "type": "module",
   "version": "0.0.1",
+  "type": "module",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro check && astro build --timings",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "format": "vp fmt --check",
+    "format:fix": "vp fmt",
+    "lint": "vp lint",
+    "lint:fix": "vp lint --fix",
+    "prepare": "vp config"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.10",
@@ -28,7 +33,11 @@
     "@types/sanitize-html": "^2.16.2",
     "prettier": "^3.9.10",
     "prettier-plugin-astro": "^1.1.1",
+    "vite-plus": "1.2.0",
     "wrangler": "^4.151.0"
+  },
+  "overrides": {
+    "vite": "npm:@voidzero-dev/vite-plus-core@1.2.0"
   },
   "allowScripts": {
     "esbuild": true,

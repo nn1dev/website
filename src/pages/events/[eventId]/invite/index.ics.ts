@@ -46,9 +46,7 @@ export async function getStaticPaths() {
   const allEvents = await getCollection("events");
 
   return allEvents
-    .filter(
-      (event) => import.meta.env.MODE === "development" || !event.data.draft,
-    )
+    .filter((event) => import.meta.env.MODE === "development" || !event.data.draft)
     .map(({ data }) => ({
       params: { eventId: data.id.toString() },
     }));

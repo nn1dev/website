@@ -3,16 +3,12 @@
   "name": "nn1dev-website",
   // Update to today's date
   "compatibility_date": "2026-03-10",
-  "compatibility_flags": [
-    "nodejs_compat",
-    "nodejs_als",
-    "global_fetch_strictly_public"
-  ],
+  "compatibility_flags": ["nodejs_compat", "nodejs_als", "global_fetch_strictly_public"],
   "assets": {
     "binding": "ASSETS",
-    "directory": "./dist"
+    "directory": "./dist",
   },
   "observability": {
-    "enabled": true
-  }
+    "enabled": true,
+  },
 }

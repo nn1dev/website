@@ -24,12 +24,5 @@
       "description": "Series of snappy presentations and demos where everyone can share the results of their weekend hacks. In no particular order, not limited to any category. The idea is to present what our local geeks are about and connect people with similar interests."
     }
   ],
-  "speakers": [
-    "dan-jordan",
-    "jordan-legg",
-    "roger-hughes",
-    "pj-evans",
-    "matthew-owen",
-    "rob-hough"
-  ]
+  "speakers": ["dan-jordan", "jordan-legg", "roger-hughes", "pj-evans", "matthew-owen", "rob-hough"]
 }
