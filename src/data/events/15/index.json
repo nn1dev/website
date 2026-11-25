@@ -2,8 +2,8 @@
   "id": 15,
   "ogImage": "./og.jpg",
   "draft": true,
-  "name": "#15: \"Why the Best Engineers Don't Always Get Promoted\" by Ainsley Clark and \"TBC\" by Jake Archibald",
-  "description": "TBC",
+  "name": "#15: \"Why the Best Engineers Don't Always Get Promoted\" by Ainsley Clark and \"Image compression for the web\" by Jake Archibald",
+  "description": "Doing great work but still waiting for a promotion? Ainsley Clark from JetBrains, a familiar face in the Go community, explains why great engineers get stuck and how to get noticed. Then Jake Archibald, an internationally known speaker who helps shape web standards, explains which image formats to use on the web, and when.",
   "dateStart": "2027-01-28T18:00Z",
   "dateEnd": "2027-01-28T20:00Z",
   "location": "Vulcan Works, 34-38 Guildhall Rd, Northampton, NN1 1EW",
@@ -32,7 +32,8 @@
     {
       "dateStart": "2027-01-28T19:15Z",
       "dateEnd": "2027-01-28T19:45Z",
-      "title": "\"TBC\" by Jake Archibald"
+      "title": "\"Image compression for the web\" by Jake Archibald",
+      "description": "Human eyes are bad - learn how to exploit that for web performance! In this session we'll tour the image codecs available in browsers, from relics of the 1990s, through to the latest HDR formats. Learning how to use these formats properly means you can halve your image sizes compared to most sites on the web."
     }
   ],
   "speakers": ["ainsley-clark", "jake-archibald"]
