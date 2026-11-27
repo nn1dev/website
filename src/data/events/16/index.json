@@ -2,7 +2,7 @@
   "id": 16,
   "ogImage": "./og.jpg",
   "draft": true,
-  "name": "#16: \"TBC\" by Adio Mojeed and \"TBC\" by TBC",
+  "name": "#16: \"Charts in HTML and CSS\" by Keith Cirkel and \"TBC\" by Adio Mojeed",
   "description": "TBC",
   "dateStart": "2027-03-25T18:00Z",
   "dateEnd": "2027-03-25T20:00Z",
@@ -21,7 +21,7 @@
     {
       "dateStart": "2027-03-25T18:30Z",
       "dateEnd": "2027-03-25T19:00Z",
-      "title": "\"TBC\" by Adio Mojeed",
+      "title": "\"Charts in HTML and CSS\" by Keith Cirkel",
       "description": ""
     },
     {
@@ -32,7 +32,7 @@
     {
       "dateStart": "2027-03-25T19:15Z",
       "dateEnd": "2027-03-25T19:45Z",
-      "title": "\"TBC\" by TBC"
+      "title": "\"TBC\" by Adio Mojeed"
     }
   ],
   "speakers": ["adio-mojeed"]

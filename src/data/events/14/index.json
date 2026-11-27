@@ -41,5 +41,35 @@
       "description": "We all believed life with head is better than life without head, however CMS vendors have been encouraging and promoting Headless CMS for many years now. This talk walks through the honest trade-offs between headless and traditional monolithic CMS architecture, using Umbraco as the common reference point."
     }
   ],
-  "speakers": ["lotte-pitcher", "mitchell-nortje", "paul-dolby", "rehan-butt"]
+  "speakers": ["lotte-pitcher", "mitchell-nortje", "paul-dolby", "rehan-butt"],
+  "images": [
+    {
+      "src": "./gallery/cap.jpg",
+      "caption": "Umbraco cap"
+    },
+    {
+      "src": "./gallery/lotte-1.jpg",
+      "caption": "\"Still Curious: Open Source and AI\" by Lotte Pitcher"
+    },
+    {
+      "src": "./gallery/lotte-2.jpg",
+      "caption": "\"Still Curious: Open Source and AI\" by Lotte Pitcher"
+    },
+    {
+      "src": "./gallery/spinbox-1.jpg",
+      "caption": "\"Solving for Y: The XY Problem in Practice\" by Mitchell Nortje & Paul Dolby"
+    },
+    {
+      "src": "./gallery/spinbox-2.jpg",
+      "caption": "\"Solving for Y: The XY Problem in Practice\" by Mitchell Nortje & Paul Dolby"
+    },
+    {
+      "src": "./gallery/spinbox-3.jpg",
+      "caption": "\"Solving for Y: The XY Problem in Practice\" by Mitchell Nortje & Paul Dolby"
+    },
+    {
+      "src": "./gallery/rehan-2.jpg",
+      "caption": "\"Don't lose your head\" by Rehan Butt"
+    }
+  ]
 }
