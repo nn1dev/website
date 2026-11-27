@@ -1,7 +1,6 @@
 {
   "id": 15,
   "ogImage": "./og.jpg",
-  "draft": true,
   "name": "#15: \"Why the Best Engineers Don't Always Get Promoted\" by Ainsley Clark and \"Image compression for the web\" by Jake Archibald",
   "description": "Doing great work but still waiting for a promotion? Ainsley Clark from JetBrains, a familiar face in the Go community, explains why great engineers get stuck and how to get noticed. Then Jake Archibald, an internationally known speaker who helps shape web standards, explains which image formats to use on the web, and when.",
   "dateStart": "2027-01-28T18:00Z",
